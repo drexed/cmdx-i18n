@@ -19,9 +19,6 @@ Layout/FirstHashElementIndentation:
   EnforcedStyle: consistent
 Layout/LineLength:
   Enabled: false
-RSpec/DescribeClass:
-  Exclude:
-    - 'spec/integrations/**/*'
 RSpec/SpecFilePathFormat:
   CustomTransform:
     CMDx: cmdx
