@@ -10,7 +10,7 @@
 
 # CMDx::I18n
 
-Centralization of locale data collection for CMDx.
+Centralization of locale data collection for [CMDx](https://github.com/drexed/cmdx).
 
 ## Installation
 
