@@ -25,6 +25,8 @@ RSpec/DescribeClass:
 RSpec/SpecFilePathFormat:
   CustomTransform:
     CMDx: cmdx
+Style/Documentation:
+  Enabled: false
 Style/FrozenStringLiteralComment:
   Enabled: true
   EnforcedStyle: always_true

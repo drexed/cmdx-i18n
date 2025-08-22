@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
-RSpec.describe Cmdx::I18n do
+RSpec.describe CMDx::I18n do
   it "has a version number" do
-    expect(Cmdx::I18n::VERSION).not_to be nil
+    expect(CMDx::I18n::VERSION).not_to be_nil
   end
 
   it "does something useful" do
-    expect(false).to eq(true)
+    expect(false).to be(true)
   end
 end
