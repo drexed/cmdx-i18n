@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.authors = ["Juan Gomez"]
   spec.email = ["drexed@users.noreply.github.com"]
 
-  spec.summary = "I18n translations and localization for cmdx."
+  spec.summary = "I18n translations and localization for CMDx."
   spec.description = spec.summary
   spec.homepage = "https://github.com/drexed/cmdx-i18n"
   spec.license = "MIT"
