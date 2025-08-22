@@ -1,28 +1,125 @@
-# Cmdx::I18n
+<p align="center">
+  <img src="./src/cmdx-i18n-logo.png" width="200" alt="CMDx::I18n Logo">
+</p>
 
-TODO: Delete this and the text below, and describe your gem
+<p align="center">
+  <img alt="Version" src="https://img.shields.io/gem/v/cmdx-i18n">
+  <img alt="Build" src="https://github.com/drexed/cmdx-i18n/actions/workflows/ci.yml/badge.svg">
+  <img alt="License" src="https://img.shields.io/github/license/drexed/cmdx-i18n">
+</p>
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/cmdx/i18n`. To experiment with that code, run `bin/console` for an interactive prompt.
+# CMDx::I18n
+
+Centralization of locale data collection for CMDx.
 
 ## Installation
 
-TODO: Replace `UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG` with your gem name right after releasing it to RubyGems.org. Please do not do it earlier due to security reasons. Alternatively, replace this section with instructions to install your gem from git if you don't plan to release to RubyGems.org.
+Add this line to your application's Gemfile:
 
-Install the gem and add to the application's Gemfile by executing:
-
-```bash
-bundle add UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG
+```ruby
+gem 'cmdx-i18n'
 ```
 
-If bundler is not being used to manage dependencies, install the gem by executing:
+And then execute:
 
-```bash
-gem install UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG
-```
+    $ bundle
 
-## Usage
+Or install it yourself as:
 
-TODO: Write usage instructions here
+    $ gem install cmdx-i18n
+
+## Configuration
+
+By default, `cmdx-i18n` locales are automatically loaded and are managed through the `I18n.available_locales` option.
+
+## Locales
+
+- af - Afrikaans
+- ar - Arabic
+- az - Azerbaijani
+- be - Belarusian
+- bg - Bulgarian
+- bn - Bengali
+- bs - Bosnian
+- ca - Catalan
+- cnr - Montenegrin
+- cs - Czech
+- cy - Welsh
+- da - Danish
+- de - German
+- dz - Dzongkha
+- el - Greek
+- en - English
+- eo - Esperanto
+- es - Spanish
+- et - Estonian
+- eu - Basque
+- fa - Persian
+- fi - Finnish
+- fr - French
+- fy - Western Frisian
+- gd - Scottish Gaelic
+- gl - Galician
+- he - Hebrew
+- hi - Hindi
+- hr - Croatian
+- hu - Hungarian
+- hy - Armenian
+- id - Indonesian
+- is - Icelandic
+- it - Italian
+- ja - Japanese
+- ka - Georgian
+- kk - Kazakh
+- km - Khmer
+- kn - Kannada
+- ko - Korean
+- lb - Luxembourgish
+- lo - Lao
+- lt - Lithuanian
+- lv - Latvian
+- mg - Malagasy
+- mk - Macedonian
+- ml - Malayalam
+- mn - Mongolian
+- mr-IN - Marathi (India)
+- ms - Malay
+- nb - Norwegian Bokmål
+- ne - Nepali
+- nl - Dutch
+- nn - Norwegian Nynorsk
+- oc - Occitan
+- or - Odia
+- pa - Punjabi
+- pl - Polish
+- pt - Portuguese
+- rm - Romansh
+- ro - Romanian
+- ru - Russian
+- sc - Sardinian
+- sk - Slovak
+- sl - Slovenian
+- sq - Albanian
+- sr - Serbian
+- st - Southern Sotho
+- sv - Swedish
+- sw - Swahili
+- ta - Tamil
+- te - Telugu
+- th - Thai
+- tl - Tagalog
+- tr - Turkish
+- tt - Tatar
+- ug - Uyghur
+- uk - Ukrainian
+- ur - Urdu
+- uz - Uzbek
+- vi - Vietnamese
+- wo - Wolof
+- zh-CN - Chinese (Simplified)
+- zh-HK - Chinese (Hong Kong)
+- zh-TW - Chinese (Traditional)
+- zh-YUE - Chinese (Yue)
 
 ## Development
 
