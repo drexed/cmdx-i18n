@@ -4,10 +4,10 @@ cnr:
       required: "mora biti dostupan preko izvora"
       undefined: "delegira na nedefinisani metod %{method}"
     coercions:
-      into_a: "nije mogao prisiliti u %{type}"
-      into_an: "nije mogao prisiliti u %{type}"
-      into_any: "nije mogao prisiliti u jedan od: %{types}"
-      unknown: "nepoznati %{type} tip prisile"
+      into_a: "nije mogao konvertovati u %{type}"
+      into_an: "nije mogao konvertovati u %{type}"
+      into_any: "nije mogao konvertovati u jedan od: %{types}"
+      unknown: "nepoznati %{type} tip konverzije"
     faults:
       unspecified: "nije dat razlog"
     types:

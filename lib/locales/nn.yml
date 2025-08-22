@@ -4,10 +4,10 @@ nn:
       required: "må vere tilgjengeleg via kjelda"
       undefined: "delegerer til udefinert metode %{method}"
     coercions:
-      into_a: "kunne ikkje tvinge til %{type}"
-      into_an: "kunne ikkje tvinge til %{type}"
-      into_any: "kunne ikkje tvinge til ein av: %{types}"
-      unknown: "ukjend %{type} tvangstype"
+      into_a: "kunne ikkje konvertere til %{type}"
+      into_an: "kunne ikkje konvertere til %{type}"
+      into_any: "kunne ikkje konvertere til ein av: %{types}"
+      unknown: "ukjend %{type} konverteringstype"
     faults:
       unspecified: "ingen grunn gitt"
     types:

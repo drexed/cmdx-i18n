@@ -4,10 +4,10 @@ af:
       required: "moet toeganklik wees via die bron"
       undefined: "delegeer na ongedefinieerde metode %{method}"
     coercions:
-      into_a: "kon nie dwing na %{type} nie"
-      into_an: "kon nie dwing na %{type} nie"
-      into_any: "kon nie dwing na een van: %{types} nie"
-      unknown: "onbekende %{type} dwangtipe"
+      into_a: "kon nie na %{type} omskep word nie"
+      into_an: "kon nie na %{type} omskep word nie"
+      into_any: "kon nie na een van: %{types} omskep word nie"
+      unknown: "onbekende %{type} omskep tipe"
     faults:
       unspecified: "geen rede gegee nie"
     types:

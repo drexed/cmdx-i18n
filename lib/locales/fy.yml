@@ -4,10 +4,10 @@ fy:
       required: "moat tagong hawwe fia de boarne"
       undefined: "delegearret nei ûndefiniearre metoade %{method}"
     coercions:
-      into_a: "koe net twinge nei %{type}"
-      into_an: "koe net twinge nei %{type}"
-      into_any: "koe net twinge nei ien fan: %{types}"
-      unknown: "ûnbekende %{type} twangtype"
+      into_a: "koe net nei %{type} konvertearje"
+      into_an: "koe net nei %{type} konvertearje"
+      into_any: "koe net nei ien fan: %{types} konvertearje"
+      unknown: "ûnbekende %{type} konverzje type"
     faults:
       unspecified: "gjin reden jûn"
     types:

@@ -4,10 +4,10 @@ id:
       required: "harus dapat diakses melalui sumber"
       undefined: "mendelegasikan ke metode yang tidak terdefinisi %{method}"
     coercions:
-      into_a: "tidak dapat memaksa ke %{type}"
-      into_an: "tidak dapat memaksa ke %{type}"
-      into_any: "tidak dapat memaksa ke salah satu dari: %{types}"
-      unknown: "jenis pemaksaan %{type} yang tidak dikenal"
+      into_a: "tidak dapat dikonversi ke %{type}"
+      into_an: "tidak dapat dikonversi ke %{type}"
+      into_any: "tidak dapat dikonversi ke salah satu dari: %{types}"
+      unknown: "jenis konversi %{type} yang tidak dikenal"
     faults:
       unspecified: "tidak ada alasan yang diberikan"
     types:
