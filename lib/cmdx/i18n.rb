@@ -1,10 +1,25 @@
 # frozen_string_literal: true
 
-require_relative "i18n/version"
+require "cmdx"
+require "zeitwerk"
 
-module Cmdx
+module CMDx
   module I18n
-    class Error < StandardError; end
-    # Your code goes here...
+    extend self
+
+    def gem_path
+      @gem_path ||= Pathname.new(__dir__).parent
+    end
   end
 end
+
+# Set up Zeitwerk loader for the CMDx gem
+loader = Zeitwerk::Loader.for_gem
+loader.inflector.inflect("cmdx" => "CMDx")
+loader.ignore("#{__dir__}/generators")
+loader.ignore("#{__dir__}/locales")
+loader.setup
+
+# Load the Railtie last after everything else is required so we don't
+# need to load any CMDx components when we use this Railtie.
+require_relative "cmdx/i18n/railtie" if defined?(Rails::Railtie)
