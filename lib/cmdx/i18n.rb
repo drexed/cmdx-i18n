@@ -9,7 +9,7 @@ module CMDx
     extend self
 
     def gem_path
-      @gem_path ||= Pathname.new(__dir__).parent
+      @gem_path ||= Pathname.new(__dir__).parent.parent
     end
 
   end

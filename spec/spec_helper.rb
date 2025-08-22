@@ -6,7 +6,7 @@ ENV["TZ"] = "UTC"
 require "bundler/setup"
 require "rspec"
 
-require "cmdx-i18n"
+require "cmdx/i18n"
 
 spec_path = Pathname.new(File.expand_path("../spec", File.dirname(__FILE__)))
 
