@@ -1,8 +1,8 @@
 PATH
   remote: .
   specs:
-    cmdx-i18n (0.1.0)
-      cmdx
+    cmdx-i18n (0.1.1)
+      cmdx (>= 1.5.1)
       zeitwerk
 
 GEM
@@ -10,7 +10,7 @@ GEM
   specs:
     ast (2.4.3)
     bigdecimal (3.2.2)
-    cmdx (1.5.1)
+    cmdx (1.6.1)
       bigdecimal
       logger
       zeitwerk
