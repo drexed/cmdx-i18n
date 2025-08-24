@@ -30,7 +30,7 @@ Or install it yourself as:
 
 ## Configuration
 
-By default, `cmdx-i18n` locales are automatically loaded and are managed through the `I18n.available_locales` option.
+If the `I18n` gem is installed, `cmdx-i18n` locales are automatically loaded and are managed through the `I18n.available_locales` option.
 
 Execute the following command to copy any locale to the applications `config/locales` directory:
 
