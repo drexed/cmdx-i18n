@@ -21,6 +21,9 @@ loader.inflector.inflect("cmdx" => "CMDx")
 loader.ignore("#{__dir__}/locales")
 loader.setup
 
+# Conditionally load Rails components if Rails is available
+require_relative "generators/cmdx/i18n/copy_generator" if defined?(Rails::Generators)
+
 # Load the Railtie last after everything else is required so we don't
 # need to load any CMDx::I18n components when we use this Railtie.
-require_relative "cmdx/i18n/railtie" if defined?(Rails::Railtie)
+require_relative "i18n/railtie" if defined?(Rails::Railtie)

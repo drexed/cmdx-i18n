@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    cmdx-i18n (0.1.1)
+    cmdx-i18n (0.2.0)
       cmdx (>= 1.5.1)
       zeitwerk
 

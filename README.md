@@ -32,6 +32,15 @@ Or install it yourself as:
 
 By default, `cmdx-i18n` locales are automatically loaded and are managed through the `I18n.available_locales` option.
 
+Execute the following command to copy any locale to the applications `config/locales` directory:
+
+```bash
+rails generate cmdx:i18n:locale [LOCALE]
+
+# Eg: generate french locale
+rails generate cmdx:i18n:locale fr
+```
+
 ## Locales
 
 - af - Afrikaans
