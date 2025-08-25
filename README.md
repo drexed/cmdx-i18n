@@ -12,6 +12,9 @@
 
 Centralization of locales for [CMDx](https://github.com/drexed/cmdx).
 
+> [!NOTE]
+> The contents of this gem have been integrated in the [CMDx](https://github.com/drexed/cmdx) itself and is meant for backwards compatibility between versions `1.5.0` and `1.6.2`.
+
 ## Installation
 
 Add this line to your application's Gemfile:
