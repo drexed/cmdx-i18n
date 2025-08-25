@@ -10,12 +10,13 @@ Follow the official Ruby gem guides for best practices.
 Reference the guides outlined in https://guides.rubygems.org
 
 ## Project Context
-CMDx provides a framework for designing and executing complex
-business logic within service/command objects.
+CMDx::I18n is a collection of localized translations for the CMDx framework.
+Reference the CMDx documentation in https://github.com/drexed/cmdx/blob/main/LLM.md
 
 ## Technology Stack
 - Ruby 3.4+
 - RSpec 3.1+
+- CMDx 1.6+
 
 ## Code Style and Structure
 - Write concise, idiomatic Ruby code with accurate examples
