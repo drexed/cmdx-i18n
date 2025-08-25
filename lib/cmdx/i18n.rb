@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
 require "cmdx"
-require "zeitwerk"
+
+require_relative "i18n/version"
 
 module CMDx
   module I18n
@@ -14,12 +15,6 @@ module CMDx
 
   end
 end
-
-# Set up Zeitwerk loader for the CMDx gem
-loader = Zeitwerk::Loader.for_gem
-loader.inflector.inflect("cmdx" => "CMDx")
-loader.ignore("#{__dir__}/locales")
-loader.setup
 
 # Conditionally load Rails components if Rails is available
 require_relative "generators/cmdx/i18n/copy_generator" if defined?(Rails::Generators)

@@ -10,7 +10,7 @@
 
 # CMDx::I18n
 
-Centralization of locale data collection for [CMDx](https://github.com/drexed/cmdx).
+Centralization of locales for [CMDx](https://github.com/drexed/cmdx).
 
 ## Installation
 
@@ -30,9 +30,11 @@ Or install it yourself as:
 
 ## Configuration
 
-If the `I18n` gem is installed, `cmdx-i18n` locales are automatically loaded and are managed through the `I18n.available_locales` option.
+If the `I18n` gem is installed in a Rails app, `cmdx-i18n` locales are automatically loaded and are managed through the `I18n.available_locales` option.
 
-Execute the following command to copy any locale to the applications `config/locales` directory:
+## Local Version
+
+Execute the following command to copy any locale to the Rails applications `config/locales` directory:
 
 ```bash
 rails generate cmdx:i18n:locale [LOCALE]
