@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     cmdx-i18n (0.3.0)
-      cmdx (>= 1.5.0)
+      cmdx (>= 1.5.0, < 1.7.0)
 
 GEM
   remote: https://rubygems.org/
