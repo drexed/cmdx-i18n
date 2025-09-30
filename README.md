@@ -1,19 +1,24 @@
-<p align="center">
-  <img src="./src/cmdx-i18n-logo.png" width="200" alt="CMDx::I18n Logo">
-</p>
+<div align="center">
+  <img src="./src/cmdx-light-logo.png#gh-light-mode-only" width="200" alt="CMDx Logo">
+  <img src="./src/cmdx-dark-logo.png#gh-dark-mode-only" width="200" alt="CMDx Logo">
 
-<p align="center">
+  ---
+
+  I18n localization files for the CMDx framework.
+
+  [Changelog](./CHANGELOG.md) · [Report Bug](https://github.com/drexed/cmdx-i18n/issues) · [Request Feature](https://github.com/drexed/cmdx-i18n/issues)
+
   <img alt="Version" src="https://img.shields.io/gem/v/cmdx-i18n">
   <img alt="Build" src="https://github.com/drexed/cmdx-i18n/actions/workflows/ci.yml/badge.svg">
   <img alt="License" src="https://img.shields.io/github/license/drexed/cmdx-i18n">
-</p>
+</div>
 
 # CMDx::I18n
 
 Centralization of locales for [CMDx](https://github.com/drexed/cmdx).
 
 > [!NOTE]
-> The contents of this gem have been integrated in the [CMDx](https://github.com/drexed/cmdx) itself and is meant for backwards compatibility between versions `1.5.0` and `1.6.2`.
+> The contents of this gem have been integrated in the [CMDx](https://github.com/drexed/cmdx) itself and is meant for backwards compatibility between versions `1.5.0` and `1.6.2`. This gem will only receive bug and security patches.
 
 ## Installation
 
