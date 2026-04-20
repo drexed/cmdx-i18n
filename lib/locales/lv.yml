@@ -1,15 +1,15 @@
 lv:
   cmdx:
     attributes:
-      required: "jābūt pieejamam caur avotu"
-      undefined: "deleģē nedefinētai metodei %{method}"
+      required: "ir obligāts"
     coercions:
       into_a: "nevarēja konvertēt uz %{type}"
       into_an: "nevarēja konvertēt uz %{type}"
       into_any: "nevarēja konvertēt uz vienu no: %{types}"
-      unknown: "nezināms %{type} konvertēšanas tips"
-    faults:
-      unspecified: "nav norādīts iemesls"
+    reasons:
+      unspecified: "Nav norādīts"
+    outputs:
+      missing: "jābūt iestatītam kontekstā"
     types:
       array: "masīvs"
       big_decimal: "liels decimāls"
@@ -25,6 +25,7 @@ lv:
       symbol: "simbols"
       time: "laiks"
     validators:
+      absence: "jābūt tukšam"
       exclusion:
         of: "nedrīkst būt viens no: %{values}"
         within: "nedrīkst būt starp %{min} un %{max}"
@@ -37,6 +38,9 @@ lv:
         is_not: "garumam nedrīkst būt %{is_not}"
         min: "garumam jābūt vismaz %{min}"
         max: "garumam drīkst būt maksimāli %{max}"
+        gt: "garumam jābūt lielākam par %{gt}"
+        lt: "garumam jābūt mazākam par %{lt}"
+        nil_value: "jābūt garumam"
         not_within: "garumam nedrīkst būt starp %{min} un %{max}"
         within: "garumam jābūt starp %{min} un %{max}"
       numeric:
@@ -44,6 +48,9 @@ lv:
         is_not: "nedrīkst būt %{is_not}"
         min: "jābūt vismaz %{min}"
         max: "drīkst būt maksimāli %{max}"
+        gt: "jābūt lielākam par %{gt}"
+        lt: "jābūt mazākam par %{lt}"
+        nil_value: "jābūt skaitliskam"
         not_within: "nedrīkst būt starp %{min} un %{max}"
         within: "jābūt starp %{min} un %{max}"
       presence: "nedrīkst būt tukšs"

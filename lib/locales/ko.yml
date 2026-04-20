@@ -1,15 +1,15 @@
 ko:
   cmdx:
     attributes:
-      required: "소스를 통해 접근 가능해야 합니다"
-      undefined: "정의되지 않은 메서드 %{method}에 위임합니다"
+      required: "필수입니다"
     coercions:
       into_a: "%{type}로 변환할 수 없습니다"
       into_an: "%{type}로 변환할 수 없습니다"
       into_any: "다음 중 하나로 변환할 수 없습니다: %{types}"
-      unknown: "알 수 없는 %{type} 변환 타입"
-    faults:
-      unspecified: "이유가 제공되지 않았습니다"
+    reasons:
+      unspecified: "지정되지 않음"
+    outputs:
+      missing: "컨텍스트에 설정되어야 합니다"
     types:
       array: "배열"
       big_decimal: "큰 소수"
@@ -25,6 +25,7 @@ ko:
       symbol: "심볼"
       time: "시간"
     validators:
+      absence: "비어있어야 합니다"
       exclusion:
         of: "다음 중 하나가 아니어야 합니다: %{values}"
         within: "%{min}과 %{max} 사이에 있으면 안 됩니다"
@@ -37,6 +38,9 @@ ko:
         is_not: "길이는 %{is_not}이 아니어야 합니다"
         min: "길이는 최소 %{min}이어야 합니다"
         max: "길이는 최대 %{max}여야 합니다"
+        gt: "길이는 %{gt}보다 커야 합니다"
+        lt: "길이는 %{lt}보다 작아야 합니다"
+        nil_value: "길이가 있어야 합니다"
         not_within: "길이는 %{min}과 %{max} 사이에 있으면 안 됩니다"
         within: "길이는 %{min}과 %{max} 사이에 있어야 합니다"
       numeric:
@@ -44,6 +48,9 @@ ko:
         is_not: "%{is_not}이 아니어야 합니다"
         min: "최소 %{min}이어야 합니다"
         max: "최대 %{max}여야 합니다"
+        gt: "%{gt}보다 커야 합니다"
+        lt: "%{lt}보다 작아야 합니다"
+        nil_value: "숫자여야 합니다"
         not_within: "%{min}과 %{max} 사이에 있으면 안 됩니다"
         within: "%{min}과 %{max} 사이에 있어야 합니다"
       presence: "비어있을 수 없습니다"

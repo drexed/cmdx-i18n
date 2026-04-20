@@ -1,15 +1,15 @@
 hu:
   cmdx:
     attributes:
-      required: "elérhetőnek kell lennie a forráson keresztül"
-      undefined: "delegál a nem definiált metódusra %{method}"
+      required: "kötelező"
     coercions:
       into_a: "nem sikerült %{type} típusra konvertálni"
       into_an: "nem sikerült %{type} típusra konvertálni"
       into_any: "nem sikerült konvertálni a következők egyikére: %{types}"
-      unknown: "ismeretlen %{type} konverziós típus"
-    faults:
-      unspecified: "nincs megadva ok"
+    reasons:
+      unspecified: "Nincs megadva"
+    outputs:
+      missing: "be kell állítani a kontextusban"
     types:
       array: "tömb"
       big_decimal: "nagy decimális"
@@ -25,6 +25,7 @@ hu:
       symbol: "szimbólum"
       time: "idő"
     validators:
+      absence: "üresnek kell lennie"
       exclusion:
         of: "nem lehet egyike a következőknek: %{values}"
         within: "nem lehet %{min} és %{max} között"
@@ -37,6 +38,9 @@ hu:
         is_not: "a hossz nem lehet %{is_not}"
         min: "a hossz legalább %{min} kell legyen"
         max: "a hossz legfeljebb %{max} lehet"
+        gt: "a hossz nagyobb kell legyen mint %{gt}"
+        lt: "a hossz kisebb kell legyen mint %{lt}"
+        nil_value: "hossza kell legyen"
         not_within: "a hossz nem lehet %{min} és %{max} között"
         within: "a hossz %{min} és %{max} között kell legyen"
       numeric:
@@ -44,6 +48,9 @@ hu:
         is_not: "nem lehet %{is_not}"
         min: "legalább %{min} kell legyen"
         max: "legfeljebb %{max} lehet"
+        gt: "nagyobb kell legyen mint %{gt}"
+        lt: "kisebb kell legyen mint %{lt}"
+        nil_value: "numerikusnak kell lennie"
         not_within: "nem lehet %{min} és %{max} között"
         within: "%{min} és %{max} között kell lennie"
       presence: "nem lehet üres"

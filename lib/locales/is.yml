@@ -1,15 +1,15 @@
 is:
   cmdx:
     attributes:
-      required: "verður að vera aðgengilegt gegnum uppsprettuna"
-      undefined: "fela óskilgreindri aðferð %{method}"
+      required: "er nauðsynlegt"
     coercions:
       into_a: "gat ekki breytt í %{type}"
       into_an: "gat ekki breytt í %{type}"
       into_any: "gat ekki breytt í einn af: %{types}"
-      unknown: "óþekktur %{type} breytingargerð"
-    faults:
-      unspecified: "engin ástæða gefin"
+    reasons:
+      unspecified: "Ótilgreind"
+    outputs:
+      missing: "verður að vera stillt í samhenginu"
     types:
       array: "fylki"
       big_decimal: "stór tugabrot"
@@ -25,6 +25,7 @@ is:
       symbol: "tákn"
       time: "tími"
     validators:
+      absence: "verður að vera tómt"
       exclusion:
         of: "má ekki vera einn af: %{values}"
         within: "má ekki vera á milli %{min} og %{max}"
@@ -37,6 +38,9 @@ is:
         is_not: "lengdin má ekki vera %{is_not}"
         min: "lengdin verður að vera að minnsta kosti %{min}"
         max: "lengdin má að hámarki vera %{max}"
+        gt: "lengdin verður að vera stærri en %{gt}"
+        lt: "lengdin verður að vera minni en %{lt}"
+        nil_value: "verður að hafa lengd"
         not_within: "lengdin má ekki vera á milli %{min} og %{max}"
         within: "lengdin verður að vera á milli %{min} og %{max}"
       numeric:
@@ -44,6 +48,9 @@ is:
         is_not: "má ekki vera %{is_not}"
         min: "verður að vera að minnsta kosti %{min}"
         max: "má að hámarki vera %{max}"
+        gt: "verður að vera stærri en %{gt}"
+        lt: "verður að vera minni en %{lt}"
+        nil_value: "verður að vera tölulegt"
         not_within: "má ekki vera á milli %{min} og %{max}"
         within: "verður að vera á milli %{min} og %{max}"
       presence: "má ekki vera tómur"

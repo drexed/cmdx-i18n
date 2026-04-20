@@ -1,15 +1,15 @@
 he:
   cmdx:
     attributes:
-      required: "חייב להיות נגיש דרך המקור"
-      undefined: "מאציל לשיטה לא מוגדרת %{method}"
+      required: "נדרש"
     coercions:
       into_a: "לא ניתן להמיר ל-%{type}"
       into_an: "לא ניתן להמיר ל-%{type}"
       into_any: "לא ניתן להמיר לאחד מ: %{types}"
-      unknown: "סוג המרה %{type} לא ידוע"
-    faults:
-      unspecified: "לא ניתנה סיבה"
+    reasons:
+      unspecified: "לא מוגדר"
+    outputs:
+      missing: "חייב להיות מוגדר בהקשר"
     types:
       array: "מערך"
       big_decimal: "עשרוני גדול"
@@ -25,6 +25,7 @@ he:
       symbol: "סמל"
       time: "זמן"
     validators:
+      absence: "חייב להיות ריק"
       exclusion:
         of: "לא יכול להיות אחד מ: %{values}"
         within: "לא יכול להיות בין %{min} ו-%{max}"
@@ -37,6 +38,9 @@ he:
         is_not: "האורך לא יכול להיות %{is_not}"
         min: "האורך חייב להיות לפחות %{min}"
         max: "האורך יכול להיות לכל היותר %{max}"
+        gt: "האורך חייב להיות גדול מ-%{gt}"
+        lt: "האורך חייב להיות קטן מ-%{lt}"
+        nil_value: "חייב להיות בעל אורך"
         not_within: "האורך לא יכול להיות בין %{min} ו-%{max}"
         within: "האורך חייב להיות בין %{min} ו-%{max}"
       numeric:
@@ -44,6 +48,9 @@ he:
         is_not: "לא יכול להיות %{is_not}"
         min: "חייב להיות לפחות %{min}"
         max: "יכול להיות לכל היותר %{max}"
+        gt: "חייב להיות גדול מ-%{gt}"
+        lt: "חייב להיות קטן מ-%{lt}"
+        nil_value: "חייב להיות מספרי"
         not_within: "לא יכול להיות בין %{min} ו-%{max}"
         within: "חייב להיות בין %{min} ו-%{max}"
       presence: "לא יכול להיות ריק"

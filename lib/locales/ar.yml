@@ -1,15 +1,15 @@
 ar:
   cmdx:
     attributes:
-      required: "يجب أن يكون قابلاً للوصول عبر المصدر"
-      undefined: "يفوض إلى طريقة غير معرفة %{method}"
+      required: "مطلوب"
     coercions:
       into_a: "لا يمكن تحويله إلى %{type}"
       into_an: "لا يمكن تحويله إلى %{type}"
       into_any: "لا يمكن تحويله إلى واحد من: %{types}"
-      unknown: "نوع تحويل %{type} غير معروف"
-    faults:
-      unspecified: "لم يتم تقديم سبب"
+    reasons:
+      unspecified: "غير محدد"
+    outputs:
+      missing: "يجب تعيينه في السياق"
     types:
       array: "مصفوفة"
       big_decimal: "عدد عشري كبير"
@@ -25,6 +25,7 @@ ar:
       symbol: "رمز"
       time: "الوقت"
     validators:
+      absence: "يجب أن يكون فارغاً"
       exclusion:
         of: "يجب ألا يكون واحداً من: %{values}"
         within: "يجب ألا يكون بين %{min} و %{max}"
@@ -37,6 +38,9 @@ ar:
         is_not: "يجب ألا يكون الطول %{is_not}"
         min: "يجب أن يكون الطول على الأقل %{min}"
         max: "يجب أن يكون الطول على الأكثر %{max}"
+        gt: "يجب أن يكون الطول أكبر من %{gt}"
+        lt: "يجب أن يكون الطول أقل من %{lt}"
+        nil_value: "يجب أن يكون له طول"
         not_within: "يجب ألا يكون الطول بين %{min} و %{max}"
         within: "يجب أن يكون الطول بين %{min} و %{max}"
       numeric:
@@ -44,6 +48,9 @@ ar:
         is_not: "يجب ألا يكون %{is_not}"
         min: "يجب أن يكون على الأقل %{min}"
         max: "يجب أن يكون على الأكثر %{max}"
+        gt: "يجب أن يكون أكبر من %{gt}"
+        lt: "يجب أن يكون أقل من %{lt}"
+        nil_value: "يجب أن يكون رقمياً"
         not_within: "يجب ألا يكون بين %{min} و %{max}"
         within: "يجب أن يكون بين %{min} و %{max}"
       presence: "لا يمكن أن يكون فارغاً"

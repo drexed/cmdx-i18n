@@ -1,15 +1,15 @@
 lo:
   cmdx:
     attributes:
-      required: "ຕ້ອງເຂົ້າເຖິງໄດ້ຜ່ານແຫຼ່ງຂໍ້ມູນ"
-      undefined: "ມອບໝາຍໃຫ້ກັບວິທີທີ່ບໍ່ໄດ້ກຳນົດ %{method}"
+      required: "ຕ້ອງການ"
     coercions:
       into_a: "ບໍ່ສາມາດປ່ຽນເປັນ %{type} ໄດ້"
       into_an: "ບໍ່ສາມາດປ່ຽນເປັນ %{type} ໄດ້"
       into_any: "ບໍ່ສາມາດປ່ຽນເປັນອັນໃດອັນໜຶ່ງໃນ: %{types} ໄດ້"
-      unknown: "ປະເພດການປ່ຽນ %{type} ທີ່ບໍ່ຮູ້"
-    faults:
-      unspecified: "ບໍ່ໄດ້ໃຫ້ເຫດຜົນ"
+    reasons:
+      unspecified: "ບໍ່ໄດ້ກຳນົດ"
+    outputs:
+      missing: "ຕ້ອງຖືກກໍານົດໃນບໍລິບົດ"
     types:
       array: "ອາເຣ"
       big_decimal: "ທົດສະນິຍະສູງ"
@@ -25,6 +25,7 @@ lo:
       symbol: "ສັນຍະລັກ"
       time: "ເວລາ"
     validators:
+      absence: "ຕ້ອງເປັນຄ່າວ່າງ"
       exclusion:
         of: "ບໍ່ຕ້ອງເປັນອັນໃດອັນໜຶ່ງໃນ: %{values}"
         within: "ບໍ່ຕ້ອງຢູ່ໃນຊ່ວງ %{min} ແລະ %{max}"
@@ -37,6 +38,9 @@ lo:
         is_not: "ຄວາມຍາວບໍ່ຕ້ອງເປັນ %{is_not}"
         min: "ຄວາມຍາວຕ້ອງຢ່າງໜ້ອຍ %{min}"
         max: "ຄວາມຍາວສາມາດສູງສຸດ %{max}"
+        gt: "ຄວາມຍາວຕ້ອງໃຫຍ່ກວ່າ %{gt}"
+        lt: "ຄວາມຍາວຕ້ອງນ້ອຍກວ່າ %{lt}"
+        nil_value: "ຕ້ອງມີຄວາມຍາວ"
         not_within: "ຄວາມຍາວບໍ່ຕ້ອງຢູ່ໃນຊ່ວງ %{min} ແລະ %{max}"
         within: "ຄວາມຍາວຕ້ອງຢູ່ໃນຊ່ວງ %{min} ແລະ %{max}"
       numeric:
@@ -44,6 +48,9 @@ lo:
         is_not: "ບໍ່ຕ້ອງເປັນ %{is_not}"
         min: "ຕ້ອງຢ່າງໜ້ອຍ %{min}"
         max: "ສາມາດສູງສຸດ %{max}"
+        gt: "ຕ້ອງໃຫຍ່ກວ່າ %{gt}"
+        lt: "ຕ້ອງນ້ອຍກວ່າ %{lt}"
+        nil_value: "ຕ້ອງເປັນຕົວເລກ"
         not_within: "ບໍ່ຕ້ອງຢູ່ໃນຊ່ວງ %{min} ແລະ %{max}"
         within: "ຕ້ອງຢູ່ໃນຊ່ວງ %{min} ແລະ %{max}"
       presence: "ບໍ່ສາມາດເປັນຄ່າວ່າງໄດ້"

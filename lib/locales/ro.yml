@@ -1,15 +1,15 @@
 ro:
   cmdx:
     attributes:
-      required: "trebuie să fie accesibil prin sursă"
-      undefined: "delegează la metoda nedefinită %{method}"
+      required: "este necesar"
     coercions:
       into_a: "nu a putut fi convertit în %{type}"
       into_an: "nu a putut fi convertit în %{type}"
       into_any: "nu a putut fi convertit în unul din: %{types}"
-      unknown: "tip de conversie %{type} necunoscut"
-    faults:
-      unspecified: "nu s-a dat niciun motiv"
+    reasons:
+      unspecified: "Nespecificat"
+    outputs:
+      missing: "trebuie setat în context"
     types:
       array: "array"
       big_decimal: "decimal mare"
@@ -25,6 +25,7 @@ ro:
       symbol: "simbol"
       time: "timp"
     validators:
+      absence: "trebuie să fie gol"
       exclusion:
         of: "nu trebuie să fie unul din: %{values}"
         within: "nu trebuie să fie între %{min} și %{max}"
@@ -37,6 +38,9 @@ ro:
         is_not: "lungimea nu trebuie să fie %{is_not}"
         min: "lungimea trebuie să fie cel puțin %{min}"
         max: "lungimea trebuie să fie cel mult %{max}"
+        gt: "lungimea trebuie să fie mai mare decât %{gt}"
+        lt: "lungimea trebuie să fie mai mică decât %{lt}"
+        nil_value: "trebuie să aibă o lungime"
         not_within: "lungimea nu trebuie să fie între %{min} și %{max}"
         within: "lungimea trebuie să fie între %{min} și %{max}"
       numeric:
@@ -44,6 +48,9 @@ ro:
         is_not: "nu trebuie să fie %{is_not}"
         min: "trebuie să fie cel puțin %{min}"
         max: "trebuie să fie cel mult %{max}"
+        gt: "trebuie să fie mai mare decât %{gt}"
+        lt: "trebuie să fie mai mic decât %{lt}"
+        nil_value: "trebuie să fie numeric"
         not_within: "nu trebuie să fie între %{min} și %{max}"
         within: "trebuie să fie între %{min} și %{max}"
       presence: "nu poate fi gol"

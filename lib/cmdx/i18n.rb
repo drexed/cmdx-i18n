@@ -4,17 +4,9 @@ require "cmdx"
 
 require_relative "i18n/version"
 
-module CMDx
-  module I18n
-
-    extend self
-
-    def gem_path
-      @gem_path ||= Pathname.new(__dir__).parent.parent
-    end
-
-  end
-end
+# Register the gem's bundled locale directory with CMDx::I18nProxy so that
+# the no-`i18n`-gem fallback path can resolve non-en translations.
+CMDx::I18nProxy.register(File.expand_path("../locales", __dir__))
 
 # Conditionally load Rails components if Rails is available
 require_relative "generators/cmdx/i18n/copy_generator" if defined?(Rails::Generators)

@@ -1,15 +1,15 @@
 rm:
   cmdx:
     attributes:
-      required: "stoscha esser accessibel via la funtauna"
-      undefined: "delega a la metoda betg definida %{method}"
+      required: "è obligatoric"
     coercions:
       into_a: "na pudeva betg vegnir convertì en %{type}"
       into_an: "na pudeva betg vegnir convertì en %{type}"
       into_any: "na pudeva betg vegnir convertì en in da: %{types}"
-      unknown: "tip da conversiun %{type} nunenconuschent"
-    faults:
-      unspecified: "nagin motiv dà"
+    reasons:
+      unspecified: "Betg specificà"
+    outputs:
+      missing: "sto esser definì en il context"
     types:
       array: "array"
       big_decimal: "decimal grond"
@@ -25,6 +25,7 @@ rm:
       symbol: "simbol"
       time: "ura"
     validators:
+      absence: "stoscha esser vid"
       exclusion:
         of: "na dastga betg esser in da: %{values}"
         within: "na dastga betg esser tranter %{min} e %{max}"
@@ -37,6 +38,9 @@ rm:
         is_not: "la lunghezza na dastga betg esser %{is_not}"
         min: "la lunghezza stoscha esser almain %{min}"
         max: "la lunghezza po esser al pli %{max}"
+        gt: "la lunghezza stoscha esser pli gronda che %{gt}"
+        lt: "la lunghezza stoscha esser pli pitschna che %{lt}"
+        nil_value: "sto avair ina lunghezza"
         not_within: "la lunghezza na dastga betg esser tranter %{min} e %{max}"
         within: "la lunghezza stoscha esser tranter %{min} e %{max}"
       numeric:
@@ -44,6 +48,9 @@ rm:
         is_not: "na dastga betg esser %{is_not}"
         min: "stoscha esser almain %{min}"
         max: "po esser al pli %{max}"
+        gt: "stoscha esser pli grond che %{gt}"
+        lt: "stoscha esser pli pitschen che %{lt}"
+        nil_value: "sto esser numeric"
         not_within: "na dastga betg esser tranter %{min} e %{max}"
         within: "stoscha esser tranter %{min} e %{max}"
       presence: "na po betg esser vid"

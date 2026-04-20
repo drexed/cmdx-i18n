@@ -1,15 +1,15 @@
 cs:
   cmdx:
     attributes:
-      required: "musí být přístupné přes zdroj"
-      undefined: "deleguje na nedefinovanou metodu %{method}"
+      required: "je vyžadováno"
     coercions:
       into_a: "nelze převést na %{type}"
       into_an: "nelze převést na %{type}"
       into_any: "nelze převést na jeden z: %{types}"
-      unknown: "neznámý typ převodu %{type}"
-    faults:
-      unspecified: "není uveden důvod"
+    reasons:
+      unspecified: "Neurčeno"
+    outputs:
+      missing: "musí být nastaveno v kontextu"
     types:
       array: "pole"
       big_decimal: "velké desetinné číslo"
@@ -25,6 +25,7 @@ cs:
       symbol: "symbol"
       time: "čas"
     validators:
+      absence: "musí být prázdné"
       exclusion:
         of: "nesmí být jedním z: %{values}"
         within: "nesmí být mezi %{min} a %{max}"
@@ -37,6 +38,9 @@ cs:
         is_not: "délka nesmí být %{is_not}"
         min: "délka musí být alespoň %{min}"
         max: "délka může být nejvýše %{max}"
+        gt: "délka musí být větší než %{gt}"
+        lt: "délka musí být menší než %{lt}"
+        nil_value: "musí mít délku"
         not_within: "délka nesmí být mezi %{min} a %{max}"
         within: "délka musí být mezi %{min} a %{max}"
       numeric:
@@ -44,6 +48,9 @@ cs:
         is_not: "nesmí být %{is_not}"
         min: "musí být alespoň %{min}"
         max: "může být nejvýše %{max}"
+        gt: "musí být větší než %{gt}"
+        lt: "musí být menší než %{lt}"
+        nil_value: "musí být číselné"
         not_within: "nesmí být mezi %{min} a %{max}"
         within: "musí být mezi %{min} a %{max}"
       presence: "nesmí být prázdné"

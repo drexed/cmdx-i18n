@@ -1,15 +1,15 @@
 gl:
   cmdx:
     attributes:
-      required: "debe ser accesible a través da fonte"
-      undefined: "delega ao método non definido %{method}"
+      required: "é obrigatorio"
     coercions:
       into_a: "non se puido converter a %{type}"
       into_an: "non se puido converter a %{type}"
       into_any: "non se puido converter a un de: %{types}"
-      unknown: "tipo de conversión %{type} descoñecido"
-    faults:
-      unspecified: "non se deu ningunha razón"
+    reasons:
+      unspecified: "Non especificada"
+    outputs:
+      missing: "debe estar establecido no contexto"
     types:
       array: "array"
       big_decimal: "decimal grande"
@@ -25,6 +25,7 @@ gl:
       symbol: "símbolo"
       time: "tempo"
     validators:
+      absence: "debe estar baleiro"
       exclusion:
         of: "non debe ser un de: %{values}"
         within: "non debe estar entre %{min} e %{max}"
@@ -37,6 +38,9 @@ gl:
         is_not: "a lonxitude non debe ser %{is_not}"
         min: "a lonxitude debe ser polo menos %{min}"
         max: "a lonxitude pode ser como máximo %{max}"
+        gt: "a lonxitude debe ser maior que %{gt}"
+        lt: "a lonxitude debe ser menor que %{lt}"
+        nil_value: "debe ter unha lonxitude"
         not_within: "a lonxitude non debe estar entre %{min} e %{max}"
         within: "a lonxitude debe estar entre %{min} e %{max}"
       numeric:
@@ -44,6 +48,9 @@ gl:
         is_not: "non debe ser %{is_not}"
         min: "debe ser polo menos %{min}"
         max: "pode ser como máximo %{max}"
+        gt: "debe ser maior que %{gt}"
+        lt: "debe ser menor que %{lt}"
+        nil_value: "debe ser numérico"
         not_within: "non debe estar entre %{min} e %{max}"
         within: "debe estar entre %{min} e %{max}"
       presence: "non pode estar baleiro"

@@ -1,15 +1,15 @@
 nl:
   cmdx:
     attributes:
-      required: "moet toegankelijk zijn via de bron"
-      undefined: "delegeert naar ongedefinieerde methode %{method}"
+      required: "is verplicht"
     coercions:
       into_a: "kon niet worden geconverteerd naar %{type}"
       into_an: "kon niet worden geconverteerd naar %{type}"
       into_any: "kon niet worden geconverteerd naar een van: %{types}"
-      unknown: "onbekend %{type} conversietype"
-    faults:
-      unspecified: "geen reden opgegeven"
+    reasons:
+      unspecified: "Niet gespecificeerd"
+    outputs:
+      missing: "moet ingesteld zijn in de context"
     types:
       array: "array"
       big_decimal: "grote decimaal"
@@ -25,6 +25,7 @@ nl:
       symbol: "symbool"
       time: "tijd"
     validators:
+      absence: "moet leeg zijn"
       exclusion:
         of: "mag niet een van zijn: %{values}"
         within: "mag niet tussen %{min} en %{max} liggen"
@@ -37,6 +38,9 @@ nl:
         is_not: "lengte mag niet %{is_not} zijn"
         min: "lengte moet minimaal %{min} zijn"
         max: "lengte mag maximaal %{max} zijn"
+        gt: "lengte moet groter zijn dan %{gt}"
+        lt: "lengte moet kleiner zijn dan %{lt}"
+        nil_value: "moet een lengte hebben"
         not_within: "lengte mag niet tussen %{min} en %{max} liggen"
         within: "lengte moet tussen %{min} en %{max} liggen"
       numeric:
@@ -44,6 +48,9 @@ nl:
         is_not: "mag niet %{is_not} zijn"
         min: "moet minimaal %{min} zijn"
         max: "mag maximaal %{max} zijn"
+        gt: "moet groter zijn dan %{gt}"
+        lt: "moet kleiner zijn dan %{lt}"
+        nil_value: "moet numeriek zijn"
         not_within: "mag niet tussen %{min} en %{max} liggen"
         within: "moet tussen %{min} en %{max} liggen"
       presence: "mag niet leeg zijn"

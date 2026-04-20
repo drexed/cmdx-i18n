@@ -1,15 +1,15 @@
 gd:
   cmdx:
     attributes:
-      required: "feumaidh e a bhith inntinneach tron stòr"
-      undefined: "deileigeas gu modh neo-mhìneachaidh %{method}"
+      required: "a dhìth"
     coercions:
       into_a: "cha b' urrainn tionndadh gu %{type}"
       into_an: "cha b' urrainn tionndadh gu %{type}"
       into_any: "cha b' urrainn tionndadh gu aon de: %{types}"
-      unknown: "seòrsa tionndaidh %{type} neo-aithnichte"
-    faults:
-      unspecified: "cha deach adhbhar a thoirt seachad"
+    reasons:
+      unspecified: "Neo-mhìneachaidh"
+    outputs:
+      missing: "feumaidh e bhith air a shuidheachadh sa cho-theacsa"
     types:
       array: "sreath"
       big_decimal: "deicheamh mòr"
@@ -25,6 +25,7 @@ gd:
       symbol: "samhla"
       time: "àm"
     validators:
+      absence: "feumaidh e a bhith falamh"
       exclusion:
         of: "chan fhaod a bhith aon de: %{values}"
         within: "chan fhaod a bhith taobh a-staigh %{min} agus %{max}"
@@ -37,6 +38,9 @@ gd:
         is_not: "chan fhaod an fhad a bhith %{is_not}"
         min: "feumaidh an fhad a bhith co-dhiù %{min}"
         max: "faodaidh an fhad a bhith suas ri %{max}"
+        gt: "feumaidh an fhad a bhith nas motha na %{gt}"
+        lt: "feumaidh an fhad a bhith nas lugha na %{lt}"
+        nil_value: "feumaidh fad a bhith aige"
         not_within: "chan fhaod an fhad a bhith taobh a-staigh %{min} agus %{max}"
         within: "feumaidh an fhad a bhith taobh a-staigh %{min} agus %{max}"
       numeric:
@@ -44,6 +48,9 @@ gd:
         is_not: "chan fhaod e a bhith %{is_not}"
         min: "feumaidh e a bhith co-dhiù %{min}"
         max: "faodaidh e a bhith suas ri %{max}"
+        gt: "feumaidh e a bhith nas motha na %{gt}"
+        lt: "feumaidh e a bhith nas lugha na %{lt}"
+        nil_value: "feumaidh e bhith àireamhach"
         not_within: "chan fhaod e a bhith taobh a-staigh %{min} agus %{max}"
         within: "feumaidh e a bhith taobh a-staigh %{min} agus %{max}"
       presence: "chan fhaod e a bhith falamh"

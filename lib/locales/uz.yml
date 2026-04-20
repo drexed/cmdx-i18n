@@ -1,15 +1,15 @@
 uz:
   cmdx:
     attributes:
-      required: "manba orqali kirish imkoniyati bo'lishi kerak"
-      undefined: "aniqlanmagan %{method} metodiga topshiradi"
+      required: "talab qilinadi"
     coercions:
       into_a: "%{type} ga o'tkazib bo'lmadi"
       into_an: "%{type} ga o'tkazib bo'lmadi"
       into_any: "bularning biriga o'tkazib bo'lmadi: %{types}"
-      unknown: "noma'lum %{type} o'tkazish turi"
-    faults:
-      unspecified: "sabab ko'rsatilmagan"
+    reasons:
+      unspecified: "Ko'rsatilmagan"
+    outputs:
+      missing: "kontekstda belgilangan bolishi kerak"
     types:
       array: "massiv"
       big_decimal: "katta o'nlik"
@@ -25,6 +25,7 @@ uz:
       symbol: "belgi"
       time: "vaqt"
     validators:
+      absence: "bo'sh bo'lishi kerak"
       exclusion:
         of: "bularning biri bo'lmasligi kerak: %{values}"
         within: "%{min} va %{max} oralig'ida bo'lmasligi kerak"
@@ -37,6 +38,9 @@ uz:
         is_not: "uzunligi %{is_not} bo'lmasligi kerak"
         min: "uzunligi kamida %{min} bo'lishi kerak"
         max: "uzunligi ko'pi bilan %{max} bo'lishi mumkin"
+        gt: "uzunligi %{gt} dan katta bo'lishi kerak"
+        lt: "uzunligi %{lt} dan kichik bo'lishi kerak"
+        nil_value: "uzunlikka ega bo'lishi kerak"
         not_within: "uzunligi %{min} va %{max} oralig'ida bo'lmasligi kerak"
         within: "uzunligi %{min} va %{max} oralig'ida bo'lishi kerak"
       numeric:
@@ -44,6 +48,9 @@ uz:
         is_not: "%{is_not} bo'lmasligi kerak"
         min: "kamida %{min} bo'lishi kerak"
         max: "ko'pi bilan %{max} bo'lishi mumkin"
+        gt: "%{gt} dan katta bo'lishi kerak"
+        lt: "%{lt} dan kichik bo'lishi kerak"
+        nil_value: "raqamli bo'lishi kerak"
         not_within: "%{min} va %{max} oralig'ida bo'lmasligi kerak"
         within: "%{min} va %{max} oralig'ida bo'lishi kerak"
       presence: "bo'sh bo'lishi mumkin emas"

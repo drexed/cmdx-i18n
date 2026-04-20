@@ -1,15 +1,15 @@
 de:
   cmdx:
     attributes:
-      required: "muss über die Quelle zugänglich sein"
-      undefined: "delegiert an undefinierte Methode %{method}"
+      required: "ist erforderlich"
     coercions:
       into_a: "konnte nicht in %{type} umgewandelt werden"
       into_an: "konnte nicht in %{type} umgewandelt werden"
       into_any: "konnte nicht in einen von: %{types} umgewandelt werden"
-      unknown: "unbekannter %{type} Umwandlungstyp"
-    faults:
-      unspecified: "kein Grund angegeben"
+    reasons:
+      unspecified: "Nicht angegeben"
+    outputs:
+      missing: "muss im Kontext gesetzt sein"
     types:
       array: "Array"
       big_decimal: "große Dezimalzahl"
@@ -25,6 +25,7 @@ de:
       symbol: "Symbol"
       time: "Zeit"
     validators:
+      absence: "muss leer sein"
       exclusion:
         of: "darf nicht einer von sein: %{values}"
         within: "darf nicht zwischen %{min} und %{max} liegen"
@@ -37,6 +38,9 @@ de:
         is_not: "Länge darf nicht %{is_not} sein"
         min: "Länge muss mindestens %{min} sein"
         max: "Länge darf höchstens %{max} sein"
+        gt: "Länge muss größer als %{gt} sein"
+        lt: "Länge muss kleiner als %{lt} sein"
+        nil_value: "muss eine Länge haben"
         not_within: "Länge darf nicht zwischen %{min} und %{max} liegen"
         within: "Länge muss zwischen %{min} und %{max} liegen"
       numeric:
@@ -44,6 +48,9 @@ de:
         is_not: "darf nicht %{is_not} sein"
         min: "muss mindestens %{min} sein"
         max: "darf höchstens %{max} sein"
+        gt: "muss größer als %{gt} sein"
+        lt: "muss kleiner als %{lt} sein"
+        nil_value: "muss numerisch sein"
         not_within: "darf nicht zwischen %{min} und %{max} liegen"
         within: "muss zwischen %{min} und %{max} liegen"
       presence: "darf nicht leer sein"

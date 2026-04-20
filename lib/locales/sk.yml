@@ -1,15 +1,15 @@
 sk:
   cmdx:
     attributes:
-      required: "musí byť prístupné cez zdroj"
-      undefined: "deleguje na nedefinovanú metódu %{method}"
+      required: "je vyžadované"
     coercions:
       into_a: "nepodarilo sa previesť na %{type}"
       into_an: "nepodarilo sa previesť na %{type}"
       into_any: "nepodarilo sa previesť na jeden z: %{types}"
-      unknown: "neznámy typ konverzie %{type}"
-    faults:
-      unspecified: "nie je uvedený dôvod"
+    reasons:
+      unspecified: "Nešpecifikované"
+    outputs:
+      missing: "musí byť nastavené v kontexte"
     types:
       array: "pole"
       big_decimal: "veľké desatinné číslo"
@@ -25,6 +25,7 @@ sk:
       symbol: "symbol"
       time: "čas"
     validators:
+      absence: "musí byť prázdne"
       exclusion:
         of: "nesmie byť jedným z: %{values}"
         within: "nesmie byť medzi %{min} a %{max}"
@@ -37,6 +38,9 @@ sk:
         is_not: "dĺžka nesmie byť %{is_not}"
         min: "dĺžka musí byť aspoň %{min}"
         max: "dĺžka môže byť najviac %{max}"
+        gt: "dĺžka musí byť väčšia ako %{gt}"
+        lt: "dĺžka musí byť menšia ako %{lt}"
+        nil_value: "musí mať dĺžku"
         not_within: "dĺžka nesmie byť medzi %{min} a %{max}"
         within: "dĺžka musí byť medzi %{min} a %{max}"
       numeric:
@@ -44,6 +48,9 @@ sk:
         is_not: "nesmie byť %{is_not}"
         min: "musí byť aspoň %{min}"
         max: "môže byť najviac %{max}"
+        gt: "musí byť väčšie ako %{gt}"
+        lt: "musí byť menšie ako %{lt}"
+        nil_value: "musí byť číselné"
         not_within: "nesmie byť medzi %{min} a %{max}"
         within: "musí byť medzi %{min} a %{max}"
       presence: "nesmie byť prázdne"

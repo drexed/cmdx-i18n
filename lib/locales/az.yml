@@ -1,15 +1,15 @@
 az:
   cmdx:
     attributes:
-      required: "mənbə vasitəsilə əlçatan olmalıdır"
-      undefined: "müəyyən edilməmiş metoda %{method} təyin edir"
+      required: "tələb olunur"
     coercions:
       into_a: "%{type} tipinə çevrilə bilmədi"
       into_an: "%{type} tipinə çevrilə bilmədi"
       into_any: "aşağıdakılardan birinə çevrilə bilmədi: %{types}"
-      unknown: "naməlum %{type} çevrilmə tipi"
-    faults:
-      unspecified: "səbəb göstərilməyib"
+    reasons:
+      unspecified: "Göstərilməyib"
+    outputs:
+      missing: "kontekstdə təyin edilməlidir"
     types:
       array: "massiv"
       big_decimal: "böyük onluq"
@@ -25,6 +25,7 @@ az:
       symbol: "simvol"
       time: "vaxt"
     validators:
+      absence: "boş olmalıdır"
       exclusion:
         of: "aşağıdakılardan biri ola bilməz: %{values}"
         within: "%{min} və %{max} arasında ola bilməz"
@@ -37,6 +38,9 @@ az:
         is_not: "uzunluq %{is_not} ola bilməz"
         min: "uzunluq ən azı %{min} olmalıdır"
         max: "uzunluq ən çoxu %{max} ola bilər"
+        gt: "uzunluq %{gt}-dən böyük olmalıdır"
+        lt: "uzunluq %{lt}-dən kiçik olmalıdır"
+        nil_value: "uzunluğu olmalıdır"
         not_within: "uzunluq %{min} və %{max} arasında ola bilməz"
         within: "uzunluq %{min} və %{max} arasında olmalıdır"
       numeric:
@@ -44,6 +48,9 @@ az:
         is_not: "%{is_not} ola bilməz"
         min: "ən azı %{min} olmalıdır"
         max: "ən çoxu %{max} ola bilər"
+        gt: "%{gt}-dən böyük olmalıdır"
+        lt: "%{lt}-dən kiçik olmalıdır"
+        nil_value: "rəqəmli olmalıdır"
         not_within: "%{min} və %{max} arasında ola bilməz"
         within: "%{min} və %{max} arasında olmalıdır"
       presence: "boş ola bilməz"

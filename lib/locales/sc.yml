@@ -1,15 +1,15 @@
 sc:
   cmdx:
     attributes:
-      required: "deve èssere accessìbile a traessu sa fonte"
-      undefined: "delegat a su metodu non definidu %{method}"
+      required: "est rechertu"
     coercions:
       into_a: "no s'est podidu cunvertire in %{type}"
       into_an: "no s'est podidu cunvertire in %{type}"
       into_any: "no s'est podidu cunvertire in unu de: %{types}"
-      unknown: "tipu de cunversione %{type} disconnotu"
-    faults:
-      unspecified: "perunu motivu dadu"
+    reasons:
+      unspecified: "Non specificadu"
+    outputs:
+      missing: "depet èssere impostadu in su cuntestu"
     types:
       array: "array"
       big_decimal: "decimale mannu"
@@ -25,6 +25,7 @@ sc:
       symbol: "sìmbulu"
       time: "ora"
     validators:
+      absence: "deve èssere bòidu"
       exclusion:
         of: "non deve èssere unu de: %{values}"
         within: "non deve èssere intre %{min} e %{max}"
@@ -37,6 +38,9 @@ sc:
         is_not: "sa longària non deve èssere %{is_not}"
         min: "sa longària deve èssere a su mancu %{min}"
         max: "sa longària potet èssere a su màssimu %{max}"
+        gt: "sa longària deve èssere prus manna de %{gt}"
+        lt: "sa longària deve èssere prus pitica de %{lt}"
+        nil_value: "depet tènnere una longària"
         not_within: "sa longària non deve èssere intre %{min} e %{max}"
         within: "sa longària deve èssere intre %{min} e %{max}"
       numeric:
@@ -44,6 +48,9 @@ sc:
         is_not: "non deve èssere %{is_not}"
         min: "deve èssere a su mancu %{min}"
         max: "potet èssere a su màssimu %{max}"
+        gt: "deve èssere prus mannu de %{gt}"
+        lt: "deve èssere prus piticu de %{lt}"
+        nil_value: "depet èssere numèricu"
         not_within: "non deve èssere intre %{min} e %{max}"
         within: "deve èssere intre %{min} e %{max}"
       presence: "non potet èssere bòidu"

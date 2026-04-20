@@ -1,15 +1,15 @@
 tr:
   cmdx:
     attributes:
-      required: "kaynak üzerinden erişilebilir olmalıdır"
-      undefined: "tanımlanmamış metoda %{method} devreder"
+      required: "zorunludur"
     coercions:
       into_a: "%{type} türüne dönüştürülemedi"
       into_an: "%{type} türüne dönüştürülemedi"
       into_any: "şunlardan birine dönüştürülemedi: %{types}"
-      unknown: "bilinmeyen %{type} dönüştürme türü"
-    faults:
-      unspecified: "neden belirtilmedi"
+    reasons:
+      unspecified: "Belirtilmemiş"
+    outputs:
+      missing: "bağlamda ayarlanmış olmalıdır"
     types:
       array: "dizi"
       big_decimal: "büyük ondalık"
@@ -25,6 +25,7 @@ tr:
       symbol: "sembol"
       time: "zaman"
     validators:
+      absence: "boş olmalıdır"
       exclusion:
         of: "şunlardan biri olmamalıdır: %{values}"
         within: "%{min} ve %{max} arasında olmamalıdır"
@@ -37,6 +38,9 @@ tr:
         is_not: "uzunluk %{is_not} olmamalıdır"
         min: "uzunluk en az %{min} olmalıdır"
         max: "uzunluk en fazla %{max} olmalıdır"
+        gt: "uzunluk %{gt} değerinden büyük olmalıdır"
+        lt: "uzunluk %{lt} değerinden küçük olmalıdır"
+        nil_value: "bir uzunluğa sahip olmalı"
         not_within: "uzunluk %{min} ve %{max} arasında olmamalıdır"
         within: "uzunluk %{min} ve %{max} arasında olmalıdır"
       numeric:
@@ -44,6 +48,9 @@ tr:
         is_not: "%{is_not} olmamalıdır"
         min: "en az %{min} olmalıdır"
         max: "en fazla %{max} olmalıdır"
+        gt: "%{gt} değerinden büyük olmalıdır"
+        lt: "%{lt} değerinden küçük olmalıdır"
+        nil_value: "sayısal olmalı"
         not_within: "%{min} ve %{max} arasında olmamalıdır"
         within: "%{min} ve %{max} arasında olmalıdır"
       presence: "boş olamaz"

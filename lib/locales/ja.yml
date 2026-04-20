@@ -1,15 +1,15 @@
 ja:
   cmdx:
     attributes:
-      required: "ソースからアクセス可能である必要があります"
-      undefined: "未定義のメソッド %{method} に委譲します"
+      required: "必須です"
     coercions:
       into_a: "%{type} に変換できませんでした"
       into_an: "%{type} に変換できませんでした"
       into_any: "次のいずれかに変換できませんでした: %{types}"
-      unknown: "不明な %{type} 変換タイプ"
-    faults:
-      unspecified: "理由が指定されていません"
+    reasons:
+      unspecified: "未指定"
+    outputs:
+      missing: "コンテキストに設定する必要があります"
     types:
       array: "配列"
       big_decimal: "大きな小数"
@@ -25,6 +25,7 @@ ja:
       symbol: "シンボル"
       time: "時刻"
     validators:
+      absence: "空でなければなりません"
       exclusion:
         of: "次のいずれかであってはなりません: %{values}"
         within: "%{min} と %{max} の間であってはなりません"
@@ -37,6 +38,9 @@ ja:
         is_not: "長さは %{is_not} であってはなりません"
         min: "長さは少なくとも %{min} である必要があります"
         max: "長さは最大 %{max} である必要があります"
+        gt: "長さは %{gt} より大きい必要があります"
+        lt: "長さは %{lt} より小さい必要があります"
+        nil_value: "長さが必要です"
         not_within: "長さは %{min} と %{max} の間であってはなりません"
         within: "長さは %{min} と %{max} の間である必要があります"
       numeric:
@@ -44,6 +48,9 @@ ja:
         is_not: "%{is_not} であってはなりません"
         min: "少なくとも %{min} である必要があります"
         max: "最大 %{max} である必要があります"
+        gt: "%{gt} より大きい必要があります"
+        lt: "%{lt} より小さい必要があります"
+        nil_value: "数値である必要があります"
         not_within: "%{min} と %{max} の間であってはなりません"
         within: "%{min} と %{max} の間である必要があります"
       presence: "空であってはなりません"

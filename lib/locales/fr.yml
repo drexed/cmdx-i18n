@@ -1,15 +1,15 @@
 fr:
   cmdx:
     attributes:
-      required: "doit être accessible via la source"
-      undefined: "délègue à une méthode non définie %{method}"
+      required: "est requis"
     coercions:
       into_a: "n'a pas pu être converti en %{type}"
       into_an: "n'a pas pu être converti en %{type}"
       into_any: "n'a pas pu être converti en l'un de : %{types}"
-      unknown: "type de conversion %{type} inconnu"
-    faults:
-      unspecified: "aucune raison donnée"
+    reasons:
+      unspecified: "Non spécifié"
+    outputs:
+      missing: "doit être défini dans le contexte"
     types:
       array: "tableau"
       big_decimal: "grand décimal"
@@ -25,6 +25,7 @@ fr:
       symbol: "symbole"
       time: "heure"
     validators:
+      absence: "doit être vide"
       exclusion:
         of: "ne doit pas être l'un de : %{values}"
         within: "ne doit pas être dans %{min} et %{max}"
@@ -37,6 +38,9 @@ fr:
         is_not: "la longueur ne doit pas être %{is_not}"
         min: "la longueur doit être au moins %{min}"
         max: "la longueur doit être au plus %{max}"
+        gt: "la longueur doit être supérieure à %{gt}"
+        lt: "la longueur doit être inférieure à %{lt}"
+        nil_value: "doit avoir une longueur"
         not_within: "la longueur ne doit pas être dans %{min} et %{max}"
         within: "la longueur doit être dans %{min} et %{max}"
       numeric:
@@ -44,6 +48,9 @@ fr:
         is_not: "ne doit pas être %{is_not}"
         min: "doit être au moins %{min}"
         max: "doit être au plus %{max}"
+        gt: "doit être supérieur à %{gt}"
+        lt: "doit être inférieur à %{lt}"
+        nil_value: "doit être numérique"
         not_within: "ne doit pas être dans %{min} et %{max}"
         within: "doit être dans %{min} et %{max}"
       presence: "ne peut pas être vide"

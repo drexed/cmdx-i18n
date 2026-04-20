@@ -1,15 +1,15 @@
 fi:
   cmdx:
     attributes:
-      required: "täytyy olla saatavilla lähteen kautta"
-      undefined: "delegoi määrittelemättömälle metodille %{method}"
+      required: "on pakollinen"
     coercions:
       into_a: "ei voitu muuntaa tyypiksi %{type}"
       into_an: "ei voitu muuntaa tyypiksi %{type}"
       into_any: "ei voitu muuntaa yhdeksi seuraavista: %{types}"
-      unknown: "tuntematon %{type} muunnostyyppi"
-    faults:
-      unspecified: "syyä ei annettu"
+    reasons:
+      unspecified: "Määrittämätön"
+    outputs:
+      missing: "on asetettava kontekstissa"
     types:
       array: "taulukko"
       big_decimal: "iso desimaali"
@@ -25,6 +25,7 @@ fi:
       symbol: "symboli"
       time: "aika"
     validators:
+      absence: "täytyy olla tyhjä"
       exclusion:
         of: "ei saa olla yksi seuraavista: %{values}"
         within: "ei saa olla välillä %{min} ja %{max}"
@@ -37,6 +38,9 @@ fi:
         is_not: "pituuden ei saa olla %{is_not}"
         min: "pituuden täytyy olla vähintään %{min}"
         max: "pituuden täytyy olla enintään %{max}"
+        gt: "pituuden täytyy olla suurempi kuin %{gt}"
+        lt: "pituuden täytyy olla pienempi kuin %{lt}"
+        nil_value: "täytyy olla pituus"
         not_within: "pituuden ei saa olla välillä %{min} ja %{max}"
         within: "pituuden täytyy olla välillä %{min} ja %{max}"
       numeric:
@@ -44,6 +48,9 @@ fi:
         is_not: "ei saa olla %{is_not}"
         min: "täytyy olla vähintään %{min}"
         max: "täytyy olla enintään %{max}"
+        gt: "täytyy olla suurempi kuin %{gt}"
+        lt: "täytyy olla pienempi kuin %{lt}"
+        nil_value: "täytyy olla numeerinen"
         not_within: "ei saa olla välillä %{min} ja %{max}"
         within: "täytyy olla välillä %{min} ja %{max}"
       presence: "ei saa olla tyhjä"

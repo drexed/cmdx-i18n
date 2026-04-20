@@ -1,15 +1,15 @@
 tl:
   cmdx:
     attributes:
-      required: "dapat na ma-access sa pamamagitan ng source"
-      undefined: "nag-delegate sa hindi tinukoy na method %{method}"
+      required: "kinakailangan"
     coercions:
       into_a: "hindi ma-convert sa %{type}"
       into_an: "hindi ma-convert sa %{type}"
       into_any: "hindi ma-convert sa isa sa: %{types}"
-      unknown: "hindi kilalang %{type} conversion type"
-    faults:
-      unspecified: "walang dahilan na binigay"
+    reasons:
+      unspecified: "Hindi tinukoy"
+    outputs:
+      missing: "dapat itakda sa konteksto"
     types:
       array: "array"
       big_decimal: "malaking decimal"
@@ -25,6 +25,7 @@ tl:
       symbol: "symbol"
       time: "oras"
     validators:
+      absence: "dapat na walang laman"
       exclusion:
         of: "hindi dapat na isa sa: %{values}"
         within: "hindi dapat na nasa pagitan ng %{min} at %{max}"
@@ -37,6 +38,9 @@ tl:
         is_not: "ang haba ay hindi dapat na %{is_not}"
         min: "ang haba ay dapat na hindi bababa sa %{min}"
         max: "ang haba ay dapat na hindi hihigit sa %{max}"
+        gt: "ang haba ay dapat na higit sa %{gt}"
+        lt: "ang haba ay dapat na mas mababa sa %{lt}"
+        nil_value: "dapat may haba"
         not_within: "ang haba ay hindi dapat na nasa pagitan ng %{min} at %{max}"
         within: "ang haba ay dapat na nasa pagitan ng %{min} at %{max}"
       numeric:
@@ -44,6 +48,9 @@ tl:
         is_not: "hindi dapat na %{is_not}"
         min: "dapat na hindi bababa sa %{min}"
         max: "dapat na hindi hihigit sa %{max}"
+        gt: "dapat na higit sa %{gt}"
+        lt: "dapat na mas mababa sa %{lt}"
+        nil_value: "dapat numeriko"
         not_within: "hindi dapat na nasa pagitan ng %{min} at %{max}"
         within: "dapat na nasa pagitan ng %{min} at %{max}"
       presence: "hindi maaaring walang laman"
