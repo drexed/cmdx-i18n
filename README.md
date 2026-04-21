@@ -17,6 +17,11 @@
 
 Translations for CMDx's built-in coercion, validator, and fault messages across 86 locales.
 
+## Requirements
+
+- Ruby: MRI 3.3+ or a compatible JRuby/TruffleRuby release
+- CMDx 2.0+
+
 ## Installation
 
 ```sh
