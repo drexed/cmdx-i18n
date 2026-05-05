@@ -1,15 +1,15 @@
 bs:
   cmdx:
     attributes:
-      required: "mora biti dostupan kroz izvor"
-      undefined: "delegira nedefiniranoj metodi %{method}"
+      required: "je obavezno"
     coercions:
       into_a: "nije mogao biti pretvoren u %{type}"
       into_an: "nije mogao biti pretvoren u %{type}"
       into_any: "nije mogao biti pretvoren u jedan od: %{types}"
-      unknown: "nepoznati tip pretvorbe %{type}"
-    faults:
-      unspecified: "nije naveden razlog"
+    reasons:
+      unspecified: "Nije naveden"
+    outputs:
+      missing: "mora biti postavljeno u kontekstu"
     types:
       array: "niz"
       big_decimal: "veliki decimalni broj"
@@ -25,6 +25,7 @@ bs:
       symbol: "simbol"
       time: "vrijeme"
     validators:
+      absence: "mora biti prazno"
       exclusion:
         of: "ne smije biti jedan od: %{values}"
         within: "ne smije biti između %{min} i %{max}"
@@ -37,6 +38,9 @@ bs:
         is_not: "dužina ne smije biti %{is_not}"
         min: "dužina mora biti najmanje %{min}"
         max: "dužina može biti najviše %{max}"
+        gt: "dužina mora biti veća od %{gt}"
+        lt: "dužina mora biti manja od %{lt}"
+        nil_value: "mora imati dužinu"
         not_within: "dužina ne smije biti između %{min} i %{max}"
         within: "dužina mora biti između %{min} i %{max}"
       numeric:
@@ -44,6 +48,9 @@ bs:
         is_not: "ne smije biti %{is_not}"
         min: "mora biti najmanje %{min}"
         max: "može biti najviše %{max}"
+        gt: "mora biti veće od %{gt}"
+        lt: "mora biti manje od %{lt}"
+        nil_value: "mora biti numeričko"
         not_within: "ne smije biti između %{min} i %{max}"
         within: "mora biti između %{min} i %{max}"
       presence: "ne može biti prazno"

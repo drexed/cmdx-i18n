@@ -1,15 +1,15 @@
 es:
   cmdx:
     attributes:
-      required: "debe ser accesible a través de la fuente"
-      undefined: "delega a método indefinido %{method}"
+      required: "es obligatorio"
     coercions:
       into_a: "no se pudo convertir en un %{type}"
       into_an: "no se pudo convertir en un %{type}"
       into_any: "no se pudo convertir en uno de: %{types}"
-      unknown: "tipo de conversión %{type} desconocido"
-    faults:
-      unspecified: "sin razón especificada"
+    reasons:
+      unspecified: "No especificada"
+    outputs:
+      missing: "debe estar establecido en el contexto"
     types:
       array: "array"
       big_decimal: "decimal grande"
@@ -25,6 +25,7 @@ es:
       symbol: "símbolo"
       time: "tiempo"
     validators:
+      absence: "debe estar vacío"
       exclusion:
         of: "no debe ser uno de: %{values}"
         within: "no debe estar dentro de %{min} y %{max}"
@@ -37,6 +38,9 @@ es:
         is_not: "la longitud no debe ser %{is_not}"
         min: "la longitud debe ser al menos %{min}"
         max: "la longitud debe ser como máximo %{max}"
+        gt: "la longitud debe ser mayor que %{gt}"
+        lt: "la longitud debe ser menor que %{lt}"
+        nil_value: "debe tener una longitud"
         not_within: "la longitud no debe estar dentro de %{min} y %{max}"
         within: "la longitud debe estar dentro de %{min} y %{max}"
       numeric:
@@ -44,6 +48,9 @@ es:
         is_not: "no debe ser %{is_not}"
         min: "debe ser al menos %{min}"
         max: "debe ser como máximo %{max}"
+        gt: "debe ser mayor que %{gt}"
+        lt: "debe ser menor que %{lt}"
+        nil_value: "debe ser numérico"
         not_within: "no debe estar dentro de %{min} y %{max}"
         within: "debe estar dentro de %{min} y %{max}"
       presence: "no puede estar vacío"

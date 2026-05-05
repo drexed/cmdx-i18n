@@ -2,11 +2,13 @@
 
 module Cmdx
   module I18n
-    # Generates CMDx locale files for Rails applications
+    # Rails generator that copies CMDx::I18n locale files into the host
+    # application's +config/locales/+ directory.
     #
-    # Rails generator that copies CMDx::I18n locale files into the application's
-    # config/locales directory. This allows applications to customize and extend
-    # the default CMDx::I18n locale files.
+    # Provides manual locale installation as an alternative to the
+    # automatic load-path injection performed by {CMDx::I18n::Railtie}.
+    #
+    # @see CMDx::I18n::Railtie
     class LocaleGenerator < Rails::Generators::Base
 
       source_root File.expand_path("../../../locales", __dir__)
@@ -15,23 +17,9 @@ module Cmdx
 
       argument :locale, type: :string, default: "en", banner: "Locale to copy"
 
-      # Copies the locale template to the Rails application
-      #
-      # Copies the specified locale file from the gem's locales directory to the
-      # application's config/locales directory. If the locale file doesn't exist
-      # in the gem, the generator will fail gracefully.
+      # Copies the requested locale YAML file into +config/locales/+.
       #
       # @return [void]
-      #
-      # @example
-      #   # Copy default (English) locale file
-      #   rails generate cmdx:i18n:locale
-      #   # => Creates config/locales/en.yml
-      #
-      #   # Copy Spanish locale file
-      #   rails generate cmdx:i18n:locale es
-      #   # => Creates config/locales/es.yml
-      #
       def copy_locale_files
         copy_file("#{locale}.yml", "config/locales/#{locale}.yml")
       end

@@ -1,15 +1,15 @@
 ms:
   cmdx:
     attributes:
-      required: "mesti boleh diakses melalui sumber"
-      undefined: "delegasi kepada kaedah yang tidak ditakrifkan %{method}"
+      required: "diperlukan"
     coercions:
       into_a: "tidak boleh ditukar kepada %{type}"
       into_an: "tidak boleh ditukar kepada %{type}"
       into_any: "tidak boleh ditukar kepada salah satu daripada: %{types}"
-      unknown: "jenis penukaran %{type} yang tidak diketahui"
-    faults:
-      unspecified: "tiada sebab diberikan"
+    reasons:
+      unspecified: "Tidak ditentukan"
+    outputs:
+      missing: "mesti ditetapkan dalam konteks"
     types:
       array: "array"
       big_decimal: "perpuluhan besar"
@@ -25,6 +25,7 @@ ms:
       symbol: "simbol"
       time: "masa"
     validators:
+      absence: "mesti kosong"
       exclusion:
         of: "tidak boleh menjadi salah satu daripada: %{values}"
         within: "tidak boleh berada di antara %{min} dan %{max}"
@@ -37,6 +38,9 @@ ms:
         is_not: "panjang tidak boleh %{is_not}"
         min: "panjang mesti sekurang-kurangnya %{min}"
         max: "panjang boleh paling banyak %{max}"
+        gt: "panjang mesti lebih daripada %{gt}"
+        lt: "panjang mesti kurang daripada %{lt}"
+        nil_value: "mesti mempunyai panjang"
         not_within: "panjang tidak boleh berada di antara %{min} dan %{max}"
         within: "panjang mesti berada di antara %{min} dan %{max}"
       numeric:
@@ -44,6 +48,9 @@ ms:
         is_not: "tidak boleh %{is_not}"
         min: "mesti sekurang-kurangnya %{min}"
         max: "boleh paling banyak %{max}"
+        gt: "mesti lebih daripada %{gt}"
+        lt: "mesti kurang daripada %{lt}"
+        nil_value: "mesti berangka"
         not_within: "tidak boleh berada di antara %{min} dan %{max}"
         within: "mesti berada di antara %{min} dan %{max}"
       presence: "tidak boleh kosong"

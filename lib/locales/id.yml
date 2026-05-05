@@ -1,15 +1,15 @@
 id:
   cmdx:
     attributes:
-      required: "harus dapat diakses melalui sumber"
-      undefined: "mendelegasikan ke metode yang tidak terdefinisi %{method}"
+      required: "wajib diisi"
     coercions:
       into_a: "tidak dapat dikonversi ke %{type}"
       into_an: "tidak dapat dikonversi ke %{type}"
       into_any: "tidak dapat dikonversi ke salah satu dari: %{types}"
-      unknown: "jenis konversi %{type} yang tidak dikenal"
-    faults:
-      unspecified: "tidak ada alasan yang diberikan"
+    reasons:
+      unspecified: "Tidak ditentukan"
+    outputs:
+      missing: "harus diatur dalam konteks"
     types:
       array: "array"
       big_decimal: "desimal besar"
@@ -25,6 +25,7 @@ id:
       symbol: "simbol"
       time: "waktu"
     validators:
+      absence: "harus kosong"
       exclusion:
         of: "tidak boleh salah satu dari: %{values}"
         within: "tidak boleh di antara %{min} dan %{max}"
@@ -37,6 +38,9 @@ id:
         is_not: "panjang tidak boleh %{is_not}"
         min: "panjang minimal harus %{min}"
         max: "panjang maksimal %{max}"
+        gt: "panjang harus lebih dari %{gt}"
+        lt: "panjang harus kurang dari %{lt}"
+        nil_value: "harus memiliki panjang"
         not_within: "panjang tidak boleh di antara %{min} dan %{max}"
         within: "panjang harus di antara %{min} dan %{max}"
       numeric:
@@ -44,6 +48,9 @@ id:
         is_not: "tidak boleh %{is_not}"
         min: "minimal harus %{min}"
         max: "maksimal %{max}"
+        gt: "harus lebih dari %{gt}"
+        lt: "harus kurang dari %{lt}"
+        nil_value: "harus berupa angka"
         not_within: "tidak boleh di antara %{min} dan %{max}"
         within: "harus di antara %{min} dan %{max}"
       presence: "tidak boleh kosong"

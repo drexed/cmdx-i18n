@@ -1,15 +1,15 @@
 st:
   cmdx:
     attributes:
-      required: "e tlameha ho ba e fihleleha ka mohlodi"
-      undefined: "e fana ka boikarabello ho mokgwa o sa hlaloswang %{method}"
+      required: "e hlokahala"
     coercions:
       into_a: "ha e ka fetolelwa ho %{type}"
       into_an: "ha e ka fetolelwa ho %{type}"
       into_any: "ha e ka fetolelwa ho e mong oa: %{types}"
-      unknown: "mofuta o sa tsejoang oa phetoho %{type}"
-    faults:
-      unspecified: "ha ho na lebaka le fanoeng"
+    reasons:
+      unspecified: "Ha e hlalosoe"
+    outputs:
+      missing: "e tlameha ho hlophisetswa ka moelelo"
     types:
       array: "array"
       big_decimal: "decimal e kgolo"
@@ -25,6 +25,7 @@ st:
       symbol: "mokhoa"
       time: "nako"
     validators:
+      absence: "e tlameha ho ba e se na letho"
       exclusion:
         of: "ha e tlameha ho ba e mong oa: %{values}"
         within: "ha e tlameha ho ba pakeng tsa %{min} le %{max}"
@@ -37,6 +38,9 @@ st:
         is_not: "botelele ha bo tlameha ho ba %{is_not}"
         min: "botelele bo tlameha ho ba bonyane %{min}"
         max: "botelele bo ka ba ka ho fetisisa %{max}"
+        gt: "botelele bo tlameha ho ba boholo ho feta %{gt}"
+        lt: "botelele bo tlameha ho ba bonyane ho feta %{lt}"
+        nil_value: "e tlameha ho ba le bolelele"
         not_within: "botelele ha bo tlameha ho ba pakeng tsa %{min} le %{max}"
         within: "botelele bo tlameha ho ba pakeng tsa %{min} le %{max}"
       numeric:
@@ -44,6 +48,9 @@ st:
         is_not: "ha e tlameha ho ba %{is_not}"
         min: "e tlameha ho ba bonyane %{min}"
         max: "e ka ba ka ho fetisisa %{max}"
+        gt: "e tlameha ho ba boholo ho feta %{gt}"
+        lt: "e tlameha ho ba bonyane ho feta %{lt}"
+        nil_value: "e tlameha ho ba nomoro"
         not_within: "ha e tlameha ho ba pakeng tsa %{min} le %{max}"
         within: "e tlameha ho ba pakeng tsa %{min} le %{max}"
       presence: "ha e ka ba e se na letho"

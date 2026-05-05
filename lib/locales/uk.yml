@@ -1,15 +1,15 @@
 uk:
   cmdx:
     attributes:
-      required: "має бути доступним через джерело"
-      undefined: "делегує невизначеному методу %{method}"
+      required: "є обов'язковим"
     coercions:
       into_a: "не вдалося перетворити на %{type}"
       into_an: "не вдалося перетворити на %{type}"
       into_any: "не вдалося перетворити на один з: %{types}"
-      unknown: "невідомий тип перетворення %{type}"
-    faults:
-      unspecified: "причина не вказана"
+    reasons:
+      unspecified: "Не вказано"
+    outputs:
+      missing: "повинно бути встановлено в контексті"
     types:
       array: "масив"
       big_decimal: "велике десяткове число"
@@ -25,6 +25,7 @@ uk:
       symbol: "символ"
       time: "час"
     validators:
+      absence: "має бути порожнім"
       exclusion:
         of: "не може бути одним з: %{values}"
         within: "не може бути між %{min} та %{max}"
@@ -37,6 +38,9 @@ uk:
         is_not: "довжина не може бути %{is_not}"
         min: "довжина має бути не менше %{min}"
         max: "довжина має бути не більше %{max}"
+        gt: "довжина має бути більше %{gt}"
+        lt: "довжина має бути менше %{lt}"
+        nil_value: "повинно мати довжину"
         not_within: "довжина не може бути між %{min} та %{max}"
         within: "довжина має бути між %{min} та %{max}"
       numeric:
@@ -44,6 +48,9 @@ uk:
         is_not: "не може бути %{is_not}"
         min: "має бути не менше %{min}"
         max: "має бути не більше %{max}"
+        gt: "має бути більше %{gt}"
+        lt: "має бути менше %{lt}"
+        nil_value: "повинно бути числовим"
         not_within: "не може бути між %{min} та %{max}"
         within: "має бути між %{min} та %{max}"
       presence: "не може бути порожнім"

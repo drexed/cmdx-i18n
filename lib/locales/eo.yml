@@ -1,15 +1,15 @@
 eo:
   cmdx:
     attributes:
-      required: "devas esti alirebla tra la fonto"
-      undefined: "delegas al nedifinita metodo %{method}"
+      required: "estas bezonata"
     coercions:
       into_a: "ne povis esti konvertita al %{type}"
       into_an: "ne povis esti konvertita al %{type}"
       into_any: "ne povis esti konvertita al unu el: %{types}"
-      unknown: "nekonata %{type} konverta tipo"
-    faults:
-      unspecified: "neniu kialo donita"
+    reasons:
+      unspecified: "Nespecifita"
+    outputs:
+      missing: "devas esti agordita en la kunteksto"
     types:
       array: "tabelo"
       big_decimal: "granda dekuma"
@@ -25,6 +25,7 @@ eo:
       symbol: "simbolo"
       time: "tempo"
     validators:
+      absence: "devas esti malplena"
       exclusion:
         of: "ne devas esti unu el: %{values}"
         within: "ne devas esti inter %{min} kaj %{max}"
@@ -37,6 +38,9 @@ eo:
         is_not: "longo ne devas esti %{is_not}"
         min: "longo devas esti almenaŭ %{min}"
         max: "longo povas esti maksimume %{max}"
+        gt: "longo devas esti pli granda ol %{gt}"
+        lt: "longo devas esti pli malgranda ol %{lt}"
+        nil_value: "devas havi longon"
         not_within: "longo ne devas esti inter %{min} kaj %{max}"
         within: "longo devas esti inter %{min} kaj %{max}"
       numeric:
@@ -44,6 +48,9 @@ eo:
         is_not: "ne devas esti %{is_not}"
         min: "devas esti almenaŭ %{min}"
         max: "povas esti maksimume %{max}"
+        gt: "devas esti pli granda ol %{gt}"
+        lt: "devas esti pli malgranda ol %{lt}"
+        nil_value: "devas esti numera"
         not_within: "ne devas esti inter %{min} kaj %{max}"
         within: "devas esti inter %{min} kaj %{max}"
       presence: "ne povas esti malplena"

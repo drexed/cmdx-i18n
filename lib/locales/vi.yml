@@ -1,15 +1,15 @@
 vi:
   cmdx:
     attributes:
-      required: "phải có thể truy cập thông qua nguồn"
-      undefined: "ủy quyền cho phương thức không xác định %{method}"
+      required: "là bắt buộc"
     coercions:
       into_a: "không thể chuyển đổi thành %{type}"
       into_an: "không thể chuyển đổi thành %{type}"
       into_any: "không thể chuyển đổi thành một trong: %{types}"
-      unknown: "kiểu chuyển đổi %{type} không xác định"
-    faults:
-      unspecified: "không có lý do được cung cấp"
+    reasons:
+      unspecified: "Không xác định"
+    outputs:
+      missing: "phải được thiết lập trong ngữ cảnh"
     types:
       array: "mảng"
       big_decimal: "số thập phân lớn"
@@ -25,6 +25,7 @@ vi:
       symbol: "ký hiệu"
       time: "thời gian"
     validators:
+      absence: "phải để trống"
       exclusion:
         of: "không được là một trong: %{values}"
         within: "không được nằm giữa %{min} và %{max}"
@@ -37,6 +38,9 @@ vi:
         is_not: "độ dài không được là %{is_not}"
         min: "độ dài phải ít nhất là %{min}"
         max: "độ dài phải nhiều nhất là %{max}"
+        gt: "độ dài phải lớn hơn %{gt}"
+        lt: "độ dài phải nhỏ hơn %{lt}"
+        nil_value: "phải có độ dài"
         not_within: "độ dài không được nằm giữa %{min} và %{max}"
         within: "độ dài phải nằm giữa %{min} và %{max}"
       numeric:
@@ -44,6 +48,9 @@ vi:
         is_not: "không được là %{is_not}"
         min: "phải ít nhất là %{min}"
         max: "phải nhiều nhất là %{max}"
+        gt: "phải lớn hơn %{gt}"
+        lt: "phải nhỏ hơn %{lt}"
+        nil_value: "phải là số"
         not_within: "không được nằm giữa %{min} và %{max}"
         within: "phải nằm giữa %{min} và %{max}"
       presence: "không thể để trống"

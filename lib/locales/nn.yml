@@ -1,15 +1,15 @@
 nn:
   cmdx:
     attributes:
-      required: "må vere tilgjengeleg via kjelda"
-      undefined: "delegerer til udefinert metode %{method}"
+      required: "er påkravd"
     coercions:
       into_a: "kunne ikkje konvertere til %{type}"
       into_an: "kunne ikkje konvertere til %{type}"
       into_any: "kunne ikkje konvertere til ein av: %{types}"
-      unknown: "ukjend %{type} konverteringstype"
-    faults:
-      unspecified: "ingen grunn gitt"
+    reasons:
+      unspecified: "Uspesifisert"
+    outputs:
+      missing: "må vere sett i konteksten"
     types:
       array: "array"
       big_decimal: "stor desimal"
@@ -25,6 +25,7 @@ nn:
       symbol: "symbol"
       time: "tid"
     validators:
+      absence: "må vere tom"
       exclusion:
         of: "må ikkje vere ein av: %{values}"
         within: "må ikkje vere innanfor %{min} og %{max}"
@@ -37,6 +38,9 @@ nn:
         is_not: "lengda må ikkje vere %{is_not}"
         min: "lengda må vere minst %{min}"
         max: "lengda kan vere maksimalt %{max}"
+        gt: "lengda må vere større enn %{gt}"
+        lt: "lengda må vere mindre enn %{lt}"
+        nil_value: "må ha ei lengd"
         not_within: "lengda må ikkje vere innanfor %{min} og %{max}"
         within: "lengda må vere innanfor %{min} og %{max}"
       numeric:
@@ -44,6 +48,9 @@ nn:
         is_not: "må ikkje vere %{is_not}"
         min: "må vere minst %{min}"
         max: "kan vere maksimalt %{max}"
+        gt: "må vere større enn %{gt}"
+        lt: "må vere mindre enn %{lt}"
+        nil_value: "må vera numerisk"
         not_within: "må ikkje vere innanfor %{min} og %{max}"
         within: "må vere innanfor %{min} og %{max}"
       presence: "kan ikkje vere tom"

@@ -1,15 +1,15 @@
 sq:
   cmdx:
     attributes:
-      required: "duhet të jetë i aksesueshëm përmes burimit"
-      undefined: "delegon metodën e padefinuar %{method}"
+      required: "është e detyrueshme"
     coercions:
       into_a: "nuk mund të konvertohet në %{type}"
       into_an: "nuk mund të konvertohet në %{type}"
       into_any: "nuk mund të konvertohet në një nga: %{types}"
-      unknown: "tip i panjohur konvertimi %{type}"
-    faults:
-      unspecified: "nuk është dhënë arsye"
+    reasons:
+      unspecified: "E papërcaktuar"
+    outputs:
+      missing: "duhet të vendoset në kontekst"
     types:
       array: "array"
       big_decimal: "decimal i madh"
@@ -25,6 +25,7 @@ sq:
       symbol: "simbol"
       time: "koha"
     validators:
+      absence: "duhet të jetë bosh"
       exclusion:
         of: "nuk duhet të jetë një nga: %{values}"
         within: "nuk duhet të jetë mes %{min} dhe %{max}"
@@ -37,6 +38,9 @@ sq:
         is_not: "gjatësia nuk duhet të jetë %{is_not}"
         min: "gjatësia duhet të jetë të paktën %{min}"
         max: "gjatësia duhet të jetë më së shumti %{max}"
+        gt: "gjatësia duhet të jetë më e madhe se %{gt}"
+        lt: "gjatësia duhet të jetë më e vogël se %{lt}"
+        nil_value: "duhet të ketë një gjatësi"
         not_within: "gjatësia nuk duhet të jetë mes %{min} dhe %{max}"
         within: "gjatësia duhet të jetë mes %{min} dhe %{max}"
       numeric:
@@ -44,6 +48,9 @@ sq:
         is_not: "nuk duhet të jetë %{is_not}"
         min: "duhet të jetë të paktën %{min}"
         max: "duhet të jetë më së shumti %{max}"
+        gt: "duhet të jetë më e madhe se %{gt}"
+        lt: "duhet të jetë më e vogël se %{lt}"
+        nil_value: "duhet të jetë numerik"
         not_within: "nuk duhet të jetë mes %{min} dhe %{max}"
         within: "duhet të jetë mes %{min} dhe %{max}"
       presence: "nuk mund të jetë bosh"

@@ -4,7 +4,7 @@
 
   ---
 
-  I18n localization files for the CMDx framework.
+  Bundled locale files for the [CMDx](https://github.com/drexed/cmdx) framework.
 
   [Changelog](./CHANGELOG.md) · [Report Bug](https://github.com/drexed/cmdx-i18n/issues) · [Request Feature](https://github.com/drexed/cmdx-i18n/issues)
 
@@ -15,43 +15,57 @@
 
 # CMDx::I18n
 
-Centralization of locales for [CMDx](https://github.com/drexed/cmdx).
+Translations for CMDx's built-in coercion, validator, and fault messages across 86 locales.
 
-> [!NOTE]
-> The contents of this gem have been integrated in the [CMDx](https://github.com/drexed/cmdx) itself and is meant for backwards compatibility between versions `1.5.0` and `1.6.2`. This gem will only receive bug and security patches.
+## Requirements
+
+- Ruby: MRI 3.3+ or a compatible JRuby/TruffleRuby release
+- CMDx 2.0+
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'cmdx-i18n'
+```sh
+gem install cmdx-i18n
+# - or -
+bundle add cmdx-i18n
 ```
 
-And then execute:
+## Usage
 
-    $ bundle
+### Rails
 
-Or install it yourself as:
+On boot, the bundled Railtie loads every file under `lib/locales/` that matches `config.i18n.available_locales` into `I18n.load_path`. No configuration is required — set `config.i18n.available_locales` as you normally would and CMDx messages will resolve in the active locale.
 
-    $ gem install cmdx-i18n
+### Non-Rails
 
-## Configuration
+Requiring the gem registers its locale directory with `CMDx::I18nProxy`, so CMDx's internal fallback translator can resolve any bundled locale even without the `i18n` gem:
 
-If the `I18n` gem is installed in a Rails app, `cmdx-i18n` locales are automatically loaded and are managed through the `I18n.available_locales` option.
+```ruby
+require "cmdx/i18n"
 
-## Local Version
+CMDx.configure { |c| c.default_locale = "fr" }
+```
 
-Execute the following command to copy any locale to the Rails applications `config/locales` directory:
+If the `i18n` gem *is* loaded, `CMDx::I18nProxy` delegates to `I18n.translate` and honors `I18n.locale` / `I18n.with_locale`.
+
+## Copying Locales
+
+To vendor a locale into a Rails app's `config/locales/` for customization:
 
 ```bash
 rails generate cmdx:i18n:locale [LOCALE]
 
-# Eg: generate french locale
+# Copies en.yml by default
+rails generate cmdx:i18n:locale
+
+# Copies fr.yml
 rails generate cmdx:i18n:locale fr
 ```
 
-## Locales
+## Supported Locales
+
+<details>
+<summary>86 locales</summary>
 
 - af - Afrikaans
 - ar - Arabic
@@ -140,20 +154,18 @@ rails generate cmdx:i18n:locale fr
 - zh-TW - Chinese (Traditional)
 - zh-YUE - Chinese (Yue)
 
+</details>
+
 ## Development
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+Run `bin/setup` to install dependencies, then `rake spec` to run the tests. Use `bin/console` for an interactive prompt.
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+Release flow: bump `lib/cmdx/i18n/version.rb`, then `bundle exec rake release` to tag, push, and publish to [rubygems.org](https://rubygems.org).
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/drexed/cmdx-i18n. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/drexed/cmdx-i18n/blob/master/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome at <https://github.com/drexed/cmdx-i18n>. Contributors are expected to follow the [code of conduct](https://github.com/drexed/cmdx-i18n/blob/master/CODE_OF_CONDUCT.md).
 
 ## License
 
-The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
-## Code of Conduct
-
-Everyone interacting in the Cmdx::I18n project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/drexed/cmdx-i18n/blob/master/CODE_OF_CONDUCT.md).
+Released under the [MIT License](https://opensource.org/licenses/MIT).

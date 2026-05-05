@@ -1,15 +1,15 @@
 af:
   cmdx:
     attributes:
-      required: "moet toeganklik wees via die bron"
-      undefined: "delegeer na ongedefinieerde metode %{method}"
+      required: "word vereis"
     coercions:
       into_a: "kon nie na %{type} omskep word nie"
       into_an: "kon nie na %{type} omskep word nie"
       into_any: "kon nie na een van: %{types} omskep word nie"
-      unknown: "onbekende %{type} omskep tipe"
-    faults:
-      unspecified: "geen rede gegee nie"
+    reasons:
+      unspecified: "Ongespesifiseer"
+    outputs:
+      missing: "moet in die konteks gestel word"
     types:
       array: "skikking"
       big_decimal: "groot desimale"
@@ -25,6 +25,7 @@ af:
       symbol: "simbool"
       time: "tyd"
     validators:
+      absence: "moet leeg wees"
       exclusion:
         of: "moet nie een van wees nie: %{values}"
         within: "moet nie binne %{min} en %{max} wees nie"
@@ -37,6 +38,9 @@ af:
         is_not: "lengte moet nie %{is_not} wees nie"
         min: "lengte moet ten minste %{min} wees"
         max: "lengte kan maksimum %{max} wees"
+        gt: "lengte moet groter as %{gt} wees"
+        lt: "lengte moet kleiner as %{lt} wees"
+        nil_value: "moet 'n lengte hê"
         not_within: "lengte moet nie binne %{min} en %{max} wees nie"
         within: "lengte moet binne %{min} en %{max} wees"
       numeric:
@@ -44,6 +48,9 @@ af:
         is_not: "moet nie %{is_not} wees nie"
         min: "moet ten minste %{min} wees"
         max: "kan maksimum %{max} wees"
+        gt: "moet groter as %{gt} wees"
+        lt: "moet kleiner as %{lt} wees"
+        nil_value: "moet numeries wees"
         not_within: "moet nie binne %{min} en %{max} wees nie"
         within: "moet binne %{min} en %{max} wees"
       presence: "kan nie leeg wees nie"

@@ -1,15 +1,15 @@
 te:
   cmdx:
     attributes:
-      required: "మూలం ద్వారా ప్రాప్యత ఉండాలి"
-      undefined: "నిర్వచించబడని పద్ధతికి %{method} అప్పగిస్తుంది"
+      required: "అవసరం"
     coercions:
       into_a: "%{type} గా మార్చలేకపోయింది"
       into_an: "%{type} గా మార్చలేకపోయింది"
       into_any: "ఈ క్రింది వాటిలో ఒకటిగా మార్చలేకపోయింది: %{types}"
-      unknown: "తెలియని %{type} మార్పు రకం"
-    faults:
-      unspecified: "ఎలాంటి కారణం ఇవ్వలేదు"
+    reasons:
+      unspecified: "నిర్దిష్టం కాదు"
+    outputs:
+      missing: "సందర్భంలో సెట్ చేయబడాలి"
     types:
       array: "అరే"
       big_decimal: "పెద్ద దశాంశం"
@@ -25,6 +25,7 @@ te:
       symbol: "చిహ్నం"
       time: "సమయం"
     validators:
+      absence: "ఖాళీగా ఉండాలి"
       exclusion:
         of: "ఈ క్రింది వాటిలో ఒకటి కాకూడదు: %{values}"
         within: "%{min} మరియు %{max} మధ్య ఉండకూడదు"
@@ -37,6 +38,9 @@ te:
         is_not: "పొడవు %{is_not} కాకూడదు"
         min: "పొడవు కనీసం %{min} అయి ఉండాలి"
         max: "పొడవు గరిష్టంగా %{max} అయి ఉండవచ్చు"
+        gt: "పొడవు %{gt} కంటే ఎక్కువగా ఉండాలి"
+        lt: "పొడవు %{lt} కంటే తక్కువగా ఉండాలి"
+        nil_value: "ఒక పొడవు ఉండాలి"
         not_within: "పొడవు %{min} మరియు %{max} మధ్య ఉండకూడదు"
         within: "పొడవు %{min} మరియు %{max} మధ్య ఉండాలి"
       numeric:
@@ -44,6 +48,9 @@ te:
         is_not: "%{is_not} కాకూడదు"
         min: "కనీసం %{min} అయి ఉండాలి"
         max: "గరిష్టంగా %{max} అయి ఉండవచ్చు"
+        gt: "%{gt} కంటే ఎక్కువగా ఉండాలి"
+        lt: "%{lt} కంటే తక్కువగా ఉండాలి"
+        nil_value: "సంఖ్యాత్మకంగా ఉండాలి"
         not_within: "%{min} మరియు %{max} మధ్య ఉండకూడదు"
         within: "%{min} మరియు %{max} మధ్య ఉండాలి"
       presence: "ఖాళీగా ఉండకూడదు"

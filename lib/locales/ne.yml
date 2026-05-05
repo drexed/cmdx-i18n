@@ -1,15 +1,15 @@
 ne:
   cmdx:
     attributes:
-      required: "स्रोत मार्फत पहुँचयोग्य हुनुपर्छ"
-      undefined: "अपरिभाषित विधिलाई %{method} नियुक्त गर्दछ"
+      required: "आवश्यक छ"
     coercions:
       into_a: "%{type} मा रूपान्तरण गर्न सकिएन"
       into_an: "%{type} मा रूपान्तरण गर्न सकिएन"
       into_any: "निम्न मध्ये एउटामा रूपान्तरण गर्न सकिएन: %{types}"
-      unknown: "अज्ञात %{type} रूपान्तरण प्रकार"
-    faults:
-      unspecified: "कुनै कारण दिइएको छैन"
+    reasons:
+      unspecified: "निर्दिष्ट नभएको"
+    outputs:
+      missing: "सन्दर्भमा सेट गरिएको हुनुपर्छ"
     types:
       array: "एरे"
       big_decimal: "ठूलो दशमलव"
@@ -25,6 +25,7 @@ ne:
       symbol: "प्रतीक"
       time: "समय"
     validators:
+      absence: "खाली हुनुपर्छ"
       exclusion:
         of: "निम्न मध्ये एउटा हुन सक्दैन: %{values}"
         within: "%{min} र %{max} बीचमा हुन सक्दैन"
@@ -37,6 +38,9 @@ ne:
         is_not: "लम्बाइ %{is_not} हुन सक्दैन"
         min: "लम्बाइ कम्तिमा %{min} हुनुपर्छ"
         max: "लम्बाइ अधिकतम %{max} हुन सक्छ"
+        gt: "लम्बाइ %{gt} भन्दा ठूलो हुनुपर्छ"
+        lt: "लम्बाइ %{lt} भन्दा सानो हुनुपर्छ"
+        nil_value: "लम्बाइ हुनुपर्छ"
         not_within: "लम्बाइ %{min} र %{max} बीचमा हुन सक्दैन"
         within: "लम्बाइ %{min} र %{max} बीचमा हुनुपर्छ"
       numeric:
@@ -44,6 +48,9 @@ ne:
         is_not: "%{is_not} हुन सक्दैन"
         min: "कम्तिमा %{min} हुनुपर्छ"
         max: "अधिकतम %{max} हुन सक्छ"
+        gt: "%{gt} भन्दा ठूलो हुनुपर्छ"
+        lt: "%{lt} भन्दा सानो हुनुपर्छ"
+        nil_value: "संख्यात्मक हुनुपर्छ"
         not_within: "%{min} र %{max} बीचमा हुन सक्दैन"
         within: "%{min} र %{max} बीचमा हुनुपर्छ"
       presence: "खाली हुन सक्दैन"

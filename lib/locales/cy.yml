@@ -1,15 +1,15 @@
 cy:
   cmdx:
     attributes:
-      required: "rhaid iddo fod yn hygyrch drwy'r ffynhonnell"
-      undefined: "delegio i'r dull amhendant %{method}"
+      required: "yn ofynnol"
     coercions:
       into_a: "ni allwyd ei drawsnewid i %{type}"
       into_an: "ni allwyd ei drawsnewid i %{type}"
       into_any: "ni allwyd ei drawsnewid i un o: %{types}"
-      unknown: "math anhysbys o drawsnewid %{type}"
-    faults:
-      unspecified: "dim rheswm wedi'i roi"
+    reasons:
+      unspecified: "Anhebgor"
+    outputs:
+      missing: "rhaid ei osod yn y cyd-destun"
     types:
       array: "arae"
       big_decimal: "degol mawr"
@@ -25,6 +25,7 @@ cy:
       symbol: "symbol"
       time: "amser"
     validators:
+      absence: "rhaid iddo fod yn wag"
       exclusion:
         of: "ni all fod yn un o: %{values}"
         within: "ni all fod rhwng %{min} a %{max}"
@@ -37,6 +38,9 @@ cy:
         is_not: "ni all y hyd fod yn %{is_not}"
         min: "rhaid i'r hyd fod o leiaf %{min}"
         max: "gall y hyd fod yn fwyaf %{max}"
+        gt: "rhaid i'r hyd fod yn fwy na %{gt}"
+        lt: "rhaid i'r hyd fod yn llai na %{lt}"
+        nil_value: "rhaid iddo fod â hyd"
         not_within: "ni all y hyd fod rhwng %{min} a %{max}"
         within: "rhaid i'r hyd fod rhwng %{min} a %{max}"
       numeric:
@@ -44,6 +48,9 @@ cy:
         is_not: "ni all fod yn %{is_not}"
         min: "rhaid iddo fod o leiaf %{min}"
         max: "gall fod yn fwyaf %{max}"
+        gt: "rhaid iddo fod yn fwy na %{gt}"
+        lt: "rhaid iddo fod yn llai na %{lt}"
+        nil_value: "rhaid iddo fod yn rhifol"
         not_within: "ni all fod rhwng %{min} a %{max}"
         within: "rhaid iddo fod rhwng %{min} a %{max}"
       presence: "ni all fod yn wag"

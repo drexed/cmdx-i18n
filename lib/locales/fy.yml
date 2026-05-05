@@ -1,15 +1,15 @@
 fy:
   cmdx:
     attributes:
-      required: "moat tagong hawwe fia de boarne"
-      undefined: "delegearret nei ûndefiniearre metoade %{method}"
+      required: "is fereaske"
     coercions:
       into_a: "koe net nei %{type} konvertearje"
       into_an: "koe net nei %{type} konvertearje"
       into_any: "koe net nei ien fan: %{types} konvertearje"
-      unknown: "ûnbekende %{type} konverzje type"
-    faults:
-      unspecified: "gjin reden jûn"
+    reasons:
+      unspecified: "Net spesifisearre"
+    outputs:
+      missing: "moat ynsteld wurde yn de kontekst"
     types:
       array: "array"
       big_decimal: "grutte desimaal"
@@ -25,6 +25,7 @@ fy:
       symbol: "symboal"
       time: "tiid"
     validators:
+      absence: "moat leech wêze"
       exclusion:
         of: "moat net ien fan wêze: %{values}"
         within: "moat net binnen %{min} en %{max} wêze"
@@ -37,6 +38,9 @@ fy:
         is_not: "lingte moat net %{is_not} wêze"
         min: "lingte moat op syn minst %{min} wêze"
         max: "lingte kin maksimaal %{max} wêze"
+        gt: "lingte moat grutter as %{gt} wêze"
+        lt: "lingte moat lytser as %{lt} wêze"
+        nil_value: "moat in lingte hawwe"
         not_within: "lingte moat net binnen %{min} en %{max} wêze"
         within: "lingte moat binnen %{min} en %{max} wêze"
       numeric:
@@ -44,6 +48,9 @@ fy:
         is_not: "moat net %{is_not} wêze"
         min: "moat op syn minst %{min} wêze"
         max: "kin maksimaal %{max} wêze"
+        gt: "moat grutter as %{gt} wêze"
+        lt: "moat lytser as %{lt} wêze"
+        nil_value: "moat numerysk wêze"
         not_within: "moat net binnen %{min} en %{max} wêze"
         within: "moat binnen %{min} en %{max} wêze"
       presence: "kin net leech wêze"

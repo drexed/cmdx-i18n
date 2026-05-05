@@ -1,15 +1,15 @@
 sv:
   cmdx:
     attributes:
-      required: "måste vara tillgänglig via källan"
-      undefined: "delegerar till odefinierad metod %{method}"
+      required: "är obligatoriskt"
     coercions:
       into_a: "kunde inte konverteras till %{type}"
       into_an: "kunde inte konverteras till %{type}"
       into_any: "kunde inte konverteras till en av: %{types}"
-      unknown: "okänd %{type} konverteringstyp"
-    faults:
-      unspecified: "ingen anledning angiven"
+    reasons:
+      unspecified: "Ospecificerat"
+    outputs:
+      missing: "måste vara satt i kontexten"
     types:
       array: "array"
       big_decimal: "stort decimaltal"
@@ -25,6 +25,7 @@ sv:
       symbol: "symbol"
       time: "tid"
     validators:
+      absence: "måste vara tom"
       exclusion:
         of: "får inte vara en av: %{values}"
         within: "får inte vara mellan %{min} och %{max}"
@@ -37,6 +38,9 @@ sv:
         is_not: "längden får inte vara %{is_not}"
         min: "längden måste vara minst %{min}"
         max: "längden får högst vara %{max}"
+        gt: "längden måste vara större än %{gt}"
+        lt: "längden måste vara mindre än %{lt}"
+        nil_value: "måste ha en längd"
         not_within: "längden får inte vara mellan %{min} och %{max}"
         within: "längden måste vara mellan %{min} och %{max}"
       numeric:
@@ -44,6 +48,9 @@ sv:
         is_not: "får inte vara %{is_not}"
         min: "måste vara minst %{min}"
         max: "får högst vara %{max}"
+        gt: "måste vara större än %{gt}"
+        lt: "måste vara mindre än %{lt}"
+        nil_value: "måste vara numeriskt"
         not_within: "får inte vara mellan %{min} och %{max}"
         within: "måste vara mellan %{min} och %{max}"
       presence: "får inte vara tom"

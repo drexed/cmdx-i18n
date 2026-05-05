@@ -1,15 +1,15 @@
 mg:
   cmdx:
     attributes:
-      required: "tsy maintsy azo idirana amin'ny alalan'ny loharanom-baovao"
-      undefined: "ny delegasiona amin'ny fomba tsy voafaritra %{method}"
+      required: "ilaina"
     coercions:
       into_a: "tsy afaka ovaina ho %{type}"
       into_an: "tsy afaka ovaina ho %{type}"
       into_any: "tsy afaka ovaina ho iray amin'ireo: %{types}"
-      unknown: "karazana fovana %{type} tsy fantatra"
-    faults:
-      unspecified: "tsy nomena antony"
+    reasons:
+      unspecified: "Tsy voafaritra"
+    outputs:
+      missing: "tsy maintsy voatondro ao anatin ny contexte"
     types:
       array: "array"
       big_decimal: "desimala lehibe"
@@ -25,6 +25,7 @@ mg:
       symbol: "mariky"
       time: "ora"
     validators:
+      absence: "tsy maintsy ho banga"
       exclusion:
         of: "tsy maintsy ho iray amin'ireo: %{values}"
         within: "tsy maintsy ho eo anelanelan'ny %{min} sy %{max}"
@@ -37,6 +38,9 @@ mg:
         is_not: "ny halavany tsy maintsy %{is_not}"
         min: "ny halavany tsy maintsy farafahakeliny %{min}"
         max: "ny halavany afaka ho ambony indrindra %{max}"
+        gt: "ny halavany tsy maintsy lehibe noho %{gt}"
+        lt: "ny halavany tsy maintsy kely noho %{lt}"
+        nil_value: "tsy maintsy manana halavana"
         not_within: "ny halavany tsy maintsy ho eo anelanelan'ny %{min} sy %{max}"
         within: "ny halavany tsy maintsy ho eo anelanelan'ny %{min} sy %{max}"
       numeric:
@@ -44,6 +48,9 @@ mg:
         is_not: "tsy maintsy %{is_not}"
         min: "tsy maintsy farafahakeliny %{min}"
         max: "afaka ho ambony indrindra %{max}"
+        gt: "tsy maintsy lehibe noho %{gt}"
+        lt: "tsy maintsy kely noho %{lt}"
+        nil_value: "tsy maintsy isa"
         not_within: "tsy maintsy ho eo anelanelan'ny %{min} sy %{max}"
         within: "tsy maintsy ho eo anelanelan'ny %{min} sy %{max}"
       presence: "tsy afaka ho banga"

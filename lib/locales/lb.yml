@@ -1,15 +1,15 @@
 lb:
   cmdx:
     attributes:
-      required: "muss iwwer d'Quell zougänglech sinn"
-      undefined: "delegéiert un onbestëmmte Methode %{method}"
+      required: "ass erfuerderlech"
     coercions:
       into_a: "konnt net an %{type} ëmwandelen"
       into_an: "konnt net an %{type} ëmwandelen"
       into_any: "konnt net an ee vun dësen ëmwandelen: %{types}"
-      unknown: "onbekannte %{type} Ëmwandlungstyp"
-    faults:
-      unspecified: "kee Grond uginn"
+    reasons:
+      unspecified: "Net spezifizéiert"
+    outputs:
+      missing: "muss am Kontext gesat sinn"
     types:
       array: "Array"
       big_decimal: "Grouss Dezimal"
@@ -25,6 +25,7 @@ lb:
       symbol: "Symbol"
       time: "Zäit"
     validators:
+      absence: "muss eidel sinn"
       exclusion:
         of: "däerf net ee vun dësen sinn: %{values}"
         within: "däerf net tëscht %{min} an %{max} sinn"
@@ -37,6 +38,9 @@ lb:
         is_not: "Längt däerf net %{is_not} sinn"
         min: "Längt muss mindestens %{min} sinn"
         max: "Längt ka maximal %{max} sinn"
+        gt: "Längt muss méi grouss wéi %{gt} sinn"
+        lt: "Längt muss méi kleng wéi %{lt} sinn"
+        nil_value: "muss eng Längt hunn"
         not_within: "Längt däerf net tëscht %{min} an %{max} sinn"
         within: "Längt muss tëscht %{min} an %{max} sinn"
       numeric:
@@ -44,6 +48,9 @@ lb:
         is_not: "däerf net %{is_not} sinn"
         min: "muss mindestens %{min} sinn"
         max: "ka maximal %{max} sinn"
+        gt: "muss méi grouss wéi %{gt} sinn"
+        lt: "muss méi kleng wéi %{lt} sinn"
+        nil_value: "muss numeresch sinn"
         not_within: "däerf net tëscht %{min} an %{max} sinn"
         within: "muss tëscht %{min} an %{max} sinn"
       presence: "däerf net eidel sinn"

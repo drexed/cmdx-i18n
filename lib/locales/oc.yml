@@ -1,15 +1,15 @@
 oc:
   cmdx:
     attributes:
-      required: "deu èsser accessible via la font"
-      undefined: "delegar a la metòda non definida %{method}"
+      required: "es requerit"
     coercions:
       into_a: "poguèt pas èsser convertit en %{type}"
       into_an: "poguèt pas èsser convertit en %{type}"
       into_any: "poguèt pas èsser convertit en un de: %{types}"
-      unknown: "tipe de conversion %{type} desconegut"
-    faults:
-      unspecified: "cap de rason donada"
+    reasons:
+      unspecified: "Non especificada"
+    outputs:
+      missing: "deu èsser definit dins lo contèxt"
     types:
       array: "array"
       big_decimal: "decimal grand"
@@ -25,6 +25,7 @@ oc:
       symbol: "simbol"
       time: "ora"
     validators:
+      absence: "deu èsser void"
       exclusion:
         of: "deu pas èsser un de: %{values}"
         within: "deu pas èsser entre %{min} e %{max}"
@@ -37,6 +38,9 @@ oc:
         is_not: "la longor deu pas èsser %{is_not}"
         min: "la longor deu èsser almens %{min}"
         max: "la longor pòt èsser al màger %{max}"
+        gt: "la longor deu èsser superiora a %{gt}"
+        lt: "la longor deu èsser inferiora a %{lt}"
+        nil_value: "deu aver una longor"
         not_within: "la longor deu pas èsser entre %{min} e %{max}"
         within: "la longor deu èsser entre %{min} e %{max}"
       numeric:
@@ -44,6 +48,9 @@ oc:
         is_not: "deu pas èsser %{is_not}"
         min: "deu èsser almens %{min}"
         max: "pòt èsser al màger %{max}"
+        gt: "deu èsser superior a %{gt}"
+        lt: "deu èsser inferior a %{lt}"
+        nil_value: "deu èsser numeric"
         not_within: "deu pas èsser entre %{min} e %{max}"
         within: "deu èsser entre %{min} e %{max}"
       presence: "pòt pas èsser void"

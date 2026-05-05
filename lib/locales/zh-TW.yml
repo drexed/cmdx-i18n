@@ -1,15 +1,15 @@
 zh-TW:
   cmdx:
     attributes:
-      required: "必須可以透過來源存取"
-      undefined: "委託給未定義的方法 %{method}"
+      required: "是必填的"
     coercions:
       into_a: "無法強制轉換成 %{type}"
       into_an: "無法強制轉換成 %{type}"
       into_any: "無法強制轉換成其中一個：%{types}"
-      unknown: "未知的 %{type} 強制轉換類型"
-    faults:
-      unspecified: "沒有提供原因"
+    reasons:
+      unspecified: "未指定"
+    outputs:
+      missing: "必須在上下文中設定"
     types:
       array: "陣列"
       big_decimal: "大十進位"
@@ -25,6 +25,7 @@ zh-TW:
       symbol: "符號"
       time: "時間"
     validators:
+      absence: "必須是空白"
       exclusion:
         of: "不可以是其中一個：%{values}"
         within: "不可以在 %{min} 和 %{max} 之間"
@@ -37,6 +38,9 @@ zh-TW:
         is_not: "長度不可以是 %{is_not}"
         min: "長度至少必須是 %{min}"
         max: "長度最多可以是 %{max}"
+        gt: "長度必須大於 %{gt}"
+        lt: "長度必須小於 %{lt}"
+        nil_value: "必須有長度"
         not_within: "長度不可以在 %{min} 和 %{max} 之間"
         within: "長度必須在 %{min} 和 %{max} 之間"
       numeric:
@@ -44,6 +48,9 @@ zh-TW:
         is_not: "不可以是 %{is_not}"
         min: "至少必須是 %{min}"
         max: "最多可以是 %{max}"
+        gt: "必須大於 %{gt}"
+        lt: "必須小於 %{lt}"
+        nil_value: "必須是數字"
         not_within: "不可以在 %{min} 和 %{max} 之間"
         within: "必須在 %{min} 和 %{max} 之間"
       presence: "不可以是空白"
