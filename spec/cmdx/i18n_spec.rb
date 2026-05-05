@@ -38,10 +38,9 @@ RSpec.describe CMDx::I18n do
         hide_const("I18n")
         CMDx.configuration.default_locale = "fr"
 
-        proxy = CMDx::I18nProxy.new
-        expect(
-          proxy.translate("cmdx.validators.numeric.max", max: 10)
-        ).to eq("doit être au plus 10")
+        proxy   = CMDx::I18nProxy.new
+        message = proxy.translate("cmdx.validators.numeric.max", max: 10)
+        expect(message).to eq("doit être au plus 10")
       end
     end
   end
