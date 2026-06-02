@@ -6,7 +6,7 @@ module CMDx
   module I18n
 
     # Gem version. Bumped on release; mirrored in the gemspec.
-    VERSION = "2.0.0"
+    VERSION = "2.0.1"
 
   end
 end
